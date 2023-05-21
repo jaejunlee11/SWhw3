@@ -6,7 +6,7 @@
 #define OUTPUT_FILE_NAME "output.txt"
 // 함수 선언
 void doTask();
-void join();
+void RequestRegister();
 void program_exit();
 
 // 변수 선언
@@ -38,8 +38,8 @@ void doTask()
                 {
                     case 1:// "1.1. 회원가입“ 메뉴 부분
                     {
-                        // join() 함수에서 해당 기능 수행
-                        join();
+                        // Register() 함수에서 해당 기능 수행
+                        RequestRegister();
                         break;
                     }
                     case 2:
