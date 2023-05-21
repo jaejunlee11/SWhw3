@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 // 상수 선언
-#define MAX_STRING 32
-#define INPUT_FILE_NAME "input.txt“
+#define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
 // 함수 선언
 void doTask();
@@ -18,6 +17,7 @@ int main()
     // 파일 입출력을 위한 초기화
     FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
     FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
+    doTask();
     return 0;
 }
 
@@ -63,18 +63,6 @@ void doTask()
         }
     }
     return;
-}
-
-void join()
-{
-char user_type[MAX_STRING], name[MAX_STRING], SSN[[MAX_STRING],
-address[MAX_STRING], ID[MAX_STRING], password[MAX_STRING];
-// 입력 형식 : 이름, 주민번호, ID, Password를 파일로부터 읽음
-fscanf(in_fp, "%s %s %s %s", name, SSN, ID, password);
-// 해당 기능 수행  
-// 출력 형식
-fprintf(out_fp, "1.1. 회원가입\n");
-fprintf(out_fp, "%s %s %s %s\n", name, SSN, ID, password);
 }
 void program_exit()
 {
