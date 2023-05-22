@@ -13,7 +13,9 @@ void ApplymentInquiryUI::showApplymentList(format infoArr[], int count) {
 
 	fprintf(out_fp, "4.3. ���� ���� ��ȸ\n");
 	for (int i = 1; i < count; i++) {
-		fprintf(out_fp, "%s %d %s %d %s\n", infoArr[i].name, infoArr[i].businessNum, infoArr[i].work, infoArr[i].pNum, infoArr[i].deadline);
+		if (infoArr[i].isCancel == 0) {
+			fprintf(out_fp, "%s %d %s %d %s\n", infoArr[i].name, infoArr[i].businessNum, infoArr[i].work, infoArr[i].pNum, infoArr[i].deadline);
+		}
 	}
 };
 
