@@ -1,3 +1,4 @@
+// 헤더 선언
 #include "EmploymentRegisterUI.h"
 #include <string>
 using namespace std;
@@ -17,7 +18,10 @@ void EmploymentRegisterUI::registerEmploymentInformation()
     FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
 	string work, deadline;
 	int peopleNumber;
+	// 업무, 인원수, 신청 마감일 입력
 	fscanf(in_fp, "%s %d %s", work, &peopleNumber, deadline);
     employmentRegister->addEmploymentInformation(work,peopleNumber,deadline);
-
+	// 출력
+	fprintf(out_fp, "3.1. 채용 정보 등록\n");
+	fprintf(out_fp, "%s %d %s\n", work, peopleNumber, deadline);
 };

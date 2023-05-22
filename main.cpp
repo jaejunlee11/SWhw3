@@ -1,6 +1,9 @@
 // 헤더 선언
 #include <stdio.h>
 #include <string.h>
+#include <BusinessUser.h>
+#include <EmploymentRegister.h>
+using namespace std;
 // 상수 선언
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
@@ -11,6 +14,7 @@ void program_exit();
 
 // 변수 선언
 FILE* in_fp, *out_fp;
+User currentBusinessUser; //현재 로그인 중인 User
 
 int main()
 {
@@ -44,6 +48,18 @@ void doTask()
                     }
                     case 2:
                     {
+                        break;
+                    }
+                }
+            }
+            case 3:
+            {
+                switch(menu_level_2)
+                {
+                    case 1:// "3.1. 채용 정보 등록“ 메뉴 부분
+                    {
+                        EmploymentRegister employmentRegister();
+                        employmentRegister.run();
                         break;
                     }
                 }
