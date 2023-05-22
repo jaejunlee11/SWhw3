@@ -6,15 +6,15 @@ using namespace std;
 #include "RegisterUI.h"
 #include "Register.h"
 
-void RequestRegister(int Choice, string ID, string PW, string Name, int UniNo)
+void RequestRegister(int choice, string id, string pw, string name, int unino, User* userlist,int membernum)
 {
-    if(Choice == 1)
+    if(choice == 1)
     {
-        BusinessRegister(ID,PW,Name,UniNo);
+        BusinessRegister(id,pw,name,unino,userlist,membernum);
     }
-    else if(Choice == 2)
+    else if(choice == 2)
     {
-        NormalRegister(ID,PW,Name,UniNo);
+        NormalRegister(id,pw,name,unino,userlist,membernum);
     }
 };
 

@@ -5,17 +5,20 @@ using namespace std;
 
 #include "Register.h"
 #include "BusinessUser.h"
-// #include "NormalUser.h"
+#include "NormalUser.h"
 
-void BusinessRegister(string ID, string PW, string Name, int BizNo)
+void BusinessRegister(string id, string pw, string name, int businessnumber,User* Userlist, int membernum)
 {
- newuser = BusinessUser(ID,PW,Name,BizNo);
- Users.add(newuser);
+ newuser = BusinessUser(id,pw,name,businessnumber);
+ Userlist[membernum]= newuser;
+ membernum++;
+
 };
 
-void BusinessRegister(string ID, string PW, string Name, int SSN)
+void BusinessRegister(string id, string pw, string name, int ssn,User* Userlist, int membernum)
 {
-  newuser = NormalUser(ID,PW,Name,SSN);
-  Users.add(newuser);
-};
+  newuser = NormalUser(id,pw,name,ssn);
+  Userlist[membernum]= newuser;
+  membernum++;
+  };
 
