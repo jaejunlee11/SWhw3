@@ -12,7 +12,6 @@ private:
     NormalUser* normalUser;
     ApplymentInquiryUI applymentInquiryUI;
     ApplymentInformation applymentInformation;
-    
     ApplymentInformationCollection applyInfoCollection;
 public:
     void run(normalUser);

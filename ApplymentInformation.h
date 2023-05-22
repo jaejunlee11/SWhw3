@@ -2,14 +2,15 @@
 #include <iostream>
 #include <string>
 using namespace std;
-// Ã¤¿ëÁ¤º¸¸¦ À§ÇØ EmploymentInformation Å¬·¡½º Á¤ÀÇ
+// Ã¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ EmploymentInformation Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 struct format {
     string name,
-        int businessNum,
-        string work,
-        int pNum,
-        string deadline;
+    int businessNum,
+    string work,
+    int pNum,
+    bool isCancel,
+    string deadline;
 };
 class ApplymentInformation {
 private:
@@ -17,16 +18,14 @@ private:
     string work;
     int peopleNumber;
     string deadline;
-    bool isCancel;
+    bool isCancel = 0;
     int businessNumber;
     
     format x;
+
 public:
-    
     ApplymentInformation(string work, int peopleNumber, string deadline, string name, bool isClosed, int businessNumber);
     void getApplymentInformation();
-    void sort();
     format getFormat();
-
-
+    void cancelApplymentInformation();
 };
