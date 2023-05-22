@@ -23,9 +23,13 @@ void FindUser(string id, User* userlist)
         }
     }
 
-void Dropout(string id, User* userlist)
+
+void Logout(string id, User* userlist)
 {
 
     FindUser(id,userlist);
-    usinguser.RevokePermission();
+    if(usinguser.CheckLogin() == True)
+    {
+        usinguser.nowlogin == 0;
+    } 
 }

@@ -4,9 +4,10 @@
 using namespace std;
 
 #include "DropoutUI.h"
+#include "Dropout.h"
 
-
-void RequestDropout(string ID)
+void RequestDropout(string id, User* userlist)
 {
-    Dropout(ID);
+    Dropout(id, userlist);
 };
+

@@ -1,5 +1,5 @@
-#ifndef LOGIN_H
-#define LOGIN_H
+#ifndef LOGINUI_H
+#define LOGINUI_H
 
 // 헤더 선언
 #include <stdio.h>
@@ -11,6 +11,6 @@ using namespace std;
 std::string id;
 std::string pw;
 User* userlist;
-void Login(string id, string pw,User* userlist);
+void RequestLogin(string id, string pw,User* userlist);
 
 #endif

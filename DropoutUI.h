@@ -6,8 +6,8 @@
 #include <string>
 using namespace std;
 
-string ID;
-
-void RequestDropout(string ID);
+string id;
+User* userlist;
+void RequestDropout(string id,User* userlist);
 
 #endif

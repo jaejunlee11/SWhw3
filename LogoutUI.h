@@ -1,5 +1,5 @@
-#ifndef LOGIN_H
-#define LOGIN_H
+#ifndef LOGOUTUI_H
+#define LOGOUTUI_H
 
 // 헤더 선언
 #include <stdio.h>
@@ -9,8 +9,7 @@ using namespace std;
 #include "user.h"
 
 std::string id;
-std::string pw;
 User* userlist;
-void Login(string id, string pw,User* userlist);
+void RequestLogout(string id,User* userlist);
 
 #endif
