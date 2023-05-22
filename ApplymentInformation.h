@@ -24,7 +24,6 @@ private:
 
 public:
     ApplymentInformation(string work, int peopleNumber, string deadline, string name, bool isClosed, int businessNumber);
-    void getApplymentInformation();
-    format getFormat();
+    format getApplymentInformation();
     void cancelApplymentInformation();
 };

@@ -16,12 +16,12 @@ void ApplymentInquiry::run(NormalUser*normaluser) {
 	applyInfoCollection = normalUser->listApplymentInformation();
 
 	ApplymentInformation applyInfo = applyInfoCollection.findFirst();
-	infoArr[0] = applyInfo.getFormat();
+	infoArr[0] = applyInfo.getApplymentInformation();
 	int count = applyInfoCollection.getSize();
 
 	for (int i = 1; i < count; i++) {
 		applyInfo = applyInfoCollection.getNext();
-		infoArr[i] = applyInfo.getFormat();
+		infoArr[i] = applyInfo.getApplymentInformation();
 	}
 
 	sort(infoArr, infoArr + count, cmp);

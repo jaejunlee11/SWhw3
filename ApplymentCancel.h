@@ -14,6 +14,5 @@ class ApplymentCancel {
         ApplymentInformationCollection applyInfoCollection;
     public: 
         void cancelApplyment(int cancelNum);
-        void run(normalUser);
-
+        void run(NormalUser* normalUser);
 };

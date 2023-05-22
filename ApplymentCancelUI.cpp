@@ -4,12 +4,12 @@ using namespace std;
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
 
-void ApplymentCancelUI::putBusinessNum(ApplymentCancel control) {
+void ApplymentCancelUI::putBusinessNum(ApplymentCancel *control) {
 	FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
 	FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
 
 	fscanf(in_fp, "%d", &cancelNum);
 	control.cancelApplyment(cancelNum);
-	fprintf(out_fp, "4.4. Áö¿ø Ãë¼Ò\n");
+	fprintf(out_fp, "4.4. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½\n");
 	fprintf(out_fp, "%s %d %s\n", infoArr[i].name, infoArr[i].businessNum, infoArr[i].work);
 };

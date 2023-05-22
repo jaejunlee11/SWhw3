@@ -1,14 +1,7 @@
 #include <iostream>
 #include "ApplymentInformation.h"
 
-
-void ApplymentInformation::getApplymentInformation() {
-
-}
-
-
-
-format ApplymentInformation::getFormat() {
+format ApplymentInformation::getApplymentInformation() {
 	x.name = this->name;
 	x.businessNum = this->businessNumber;
 	x.work = this->work;
