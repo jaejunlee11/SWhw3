@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "BusinessUser.h"
+#include "NormalUser.h"
 #include "EmploymentRegister.h"
 #include "EmploymentStatistic.h"
 #include "user.h"
@@ -18,7 +19,7 @@ void program_exit();
 // 변수 선언
 FILE* in_fp, *out_fp;
 BusinessUser* currentUser; //현재 로그인 중인 User
-// NormalUser* currntUser;
+NormalUser* currntUser;
 User* currentUser; //현재 로그인 중인 User
 User*  userList= new User[MAX_NUMBER_OF_USERS];
 
@@ -77,6 +78,7 @@ void doTask()
                 {
                     case 1:// "5.1. 지원 정보 통계“ 메뉴 부분
                     {
+
                         EmploymentStatistic employmentStatisticControl;
                         employmentStatisticControl.run(currentUser);
                         break;
