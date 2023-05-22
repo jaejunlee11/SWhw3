@@ -7,8 +7,8 @@ class BusinessUser:User{
     private:
         string companyName;
         int businessNumber;
-        EmploymentInformationCollection* managedEmploymentInformationCollection;
+        EmploymentInformationCollection managedEmploymentInformationCollection;
     public:
         void addNewEmploymentInformation(string work,int peopleNumber,string deadline);
-        EmploymentInformationCollection* listEmploymentInformation();
+        EmploymentInformationCollection listEmploymentInformation();
 };

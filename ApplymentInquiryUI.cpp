@@ -11,8 +11,8 @@ void ApplymentInquiryUI::showApplymentList(format infoArr[], int count) {
 	string businessName, work;
 	int businessNum;
 
-	fprintf(out_fp, "4.3. Áö¿ø Á¤º¸ Á¶È¸\n");
-	for (i = 1; i < count; i++) {
+	fprintf(out_fp, "4.3. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸\n");
+	for (int i = 1; i < count; i++) {
 		fprintf(out_fp, "%s %d %s %d %s\n", infoArr[i].name, infoArr[i].businessNum, infoArr[i].work, infoArr[i].pNum, infoArr[i].deadline);
 	}
 };

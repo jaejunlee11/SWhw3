@@ -1,4 +1,5 @@
 #pragma once
+#include "ApplymentInformation.h"
 #include <iostream>
 
 class ApplymentInquiryUI {

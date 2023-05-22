@@ -8,9 +8,9 @@ using namespace std;
 // 채용정보를 등록을 위한 EmploymentRegister control 클래스 정의
 class EmploymentRegister{
     private:
-        EmploymentRegisterUI *employmentRegisterUI;
+        EmploymentRegisterUI employmentRegisterUI;
         BusinessUser *businessUser;
-        EmploymentInformation *employmentInformation;
+        EmploymentInformation employmentInformation;
     public:
         void addEmploymentInformation(string work,int peopleNumber,string deadline);
         void run(BusinessUser *businessUser);

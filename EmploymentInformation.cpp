@@ -12,3 +12,17 @@ EmploymentInformation::EmploymentInformation(string work,int peopleNumber,string
     this->companyName=companyName;
     this->businessNumber=businessNumber;
 };
+/*
+	함수 이름 : EmploymentInformation::getEmploymentInformation()
+	기능	  : EmploymentInformation의 값들을 구조체에 담아서 반환
+	전달 인자 : 없음
+    반환값    : Employee 구조체
+*/
+Employee EmploymentInformation::getEmploymentInformation() {
+	x.work = this->work;
+	x.businessNumber = this->businessNumber;
+	x.companyName = this->companyName;
+	x.peopleNumber = this->peopleNumber;
+	x.deadline = this->deadline;
+	return x;
+}

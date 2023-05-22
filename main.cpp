@@ -1,9 +1,10 @@
 // 헤더 선언
-#include <stdio.h>
-#include <string.h>
-#include <BusinessUser.h>
-#include <EmploymentRegister.h>
-#include <user.h>
+#include <iostream>
+#include <string>
+#include "BusinessUser.h"
+#include "EmploymentRegister.h"
+#include "EmploymentStatistic.h"
+#include "user.h"
 using namespace std;
 // 상수 선언
 #define INPUT_FILE_NAME "input.txt"
@@ -66,6 +67,18 @@ void doTask()
                     {
                         EmploymentRegister employmentRegistercontrol;
                         employmentRegistercontrol.run(currentUser);
+                        break;
+                    }
+                }
+            }
+            case 5:
+            {
+                switch(menu_level_2)
+                {
+                    case 1:// "5.1. 지원 정보 통계“ 메뉴 부분
+                    {
+                        EmploymentStatistic employmentStatisticControl;
+                        employmentStatisticControl.run(currentUser);
                         break;
                     }
                 }
