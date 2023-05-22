@@ -2,9 +2,13 @@
 #include "EmploymentInformation.h"
 class EmploymentInformationCollection{
     private:
-        EmploymentInformation* managedEmploymentInformation[];
+        EmploymentInformation* managedEmploymentInformation[50];
+        int numEmploymentInformation;
     public:
         EmploymentInformation findFirst();
         EmploymentInformation getNext();
         EmploymentInformation addEmploymentInformation(string work,int peopleNumber,string deadline, string companyName,int businessNumber);
+        EmploymentInformationCollection(){
+            numEmploymentInformation=0;
+        };
 };

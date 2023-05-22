@@ -10,7 +10,8 @@ void EmploymentRegister::addEmploymentInformation(string work,int peopleNumber,s
     businessUser->addNewEmploymentInformation(work,peopleNumber,deadline);
 };
 
-void EmploymentRegister::run(){
+void EmploymentRegister::run(BusinessUser *businessUser){
+    this->businessUser=businessUser;
     employmentRegisterUI=new EmploymentRegisterUI();
     employmentRegisterUI->registerEmploymentInformation(this);
 }
