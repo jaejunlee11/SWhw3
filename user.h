@@ -17,6 +17,6 @@ class User{
 
         void CheckIDInfo();
         void CheckLogin();
-        void RevokePermission();
+        void RevokePermission(string ID);
         void UserLogout();   
 }
