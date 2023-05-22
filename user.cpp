@@ -1,7 +1,7 @@
 // 헤더 선언
 // User list의 필요성과 그걸 보관할 장소의 부재?
 #include <stdio.h>
-#include <string.h>
+#include <string>
 #include <iostream>
 
 using namespace std;

@@ -3,6 +3,7 @@
 #include <string.h>
 #include <BusinessUser.h>
 #include <EmploymentRegister.h>
+#include <user.h>
 using namespace std;
 // 상수 선언
 #define INPUT_FILE_NAME "input.txt"
@@ -14,7 +15,7 @@ void program_exit();
 
 // 변수 선언
 FILE* in_fp, *out_fp;
-User currentBusinessUser; //현재 로그인 중인 User
+User* currentBusinessUser; //현재 로그인 중인 User
 
 int main()
 {
@@ -58,8 +59,8 @@ void doTask()
                 {
                     case 1:// "3.1. 채용 정보 등록“ 메뉴 부분
                     {
-                        EmploymentRegister employmentRegister();
-                        employmentRegister.run();
+                        EmploymentRegister employmentRegistercontrol;
+                        employmentRegistercontrol.run();
                         break;
                     }
                 }

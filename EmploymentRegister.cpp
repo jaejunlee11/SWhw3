@@ -7,5 +7,10 @@
 	반환값    : 없음
 */
 void EmploymentRegister::addEmploymentInformation(string work,int peopleNumber,string deadline){
-
+    businessUser->addNewEmploymentInformation(work,peopleNumber,deadline);
 };
+
+void EmploymentRegister::run(){
+    employmentRegisterUI=new EmploymentRegisterUI();
+    employmentRegisterUI->registerEmploymentInformation(this);
+}

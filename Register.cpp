@@ -1,11 +1,11 @@
 // 헤더 선언
 #include <stdio.h>
-#include <string.h>
+#include <string>
 using namespace std;
 
 #include "Register.h"
 #include "BusinessUser.h"
-#include "NormalUser.h"
+// #include "NormalUser.h"
 
 void BusinessRegister(string ID, string PW, string Name, int BizNo)
 {
