@@ -15,8 +15,8 @@ void program_exit();
 
 // 변수 선언
 FILE* in_fp, *out_fp;
-User* currentBusinessUser; //현재 로그인 중인 User
-
+BusinessUser* currentUser; //현재 로그인 중인 User
+// NormalUser* currntUser;
 int main()
 {
     // 파일 입출력을 위한 초기화
@@ -60,7 +60,7 @@ void doTask()
                     case 1:// "3.1. 채용 정보 등록“ 메뉴 부분
                     {
                         EmploymentRegister employmentRegistercontrol;
-                        employmentRegistercontrol.run();
+                        employmentRegistercontrol.run(currentUser);
                         break;
                     }
                 }
