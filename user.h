@@ -15,8 +15,10 @@ class User{
 
         ~User();
 
-        void CheckIDInfo();
-        void CheckLogin();
+        bool CheckIDPWInfo(string givenid,string givenpw);
+        bool CheckIDInfo(string givenid);
+        bool CheckLogin();
         void RevokePermission(string id);
         void UserLogout();   
+        void UserLogin();
 }

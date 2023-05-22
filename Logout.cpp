@@ -15,7 +15,7 @@ void FindUser(string id, User* userlist)
         while(&userlist[i] != NULL)
         {
             checkinguser = userlist[i];
-            if(checkinguser.CheckIDInfo() == id)
+            if(checkinguser.CheckIDInfo(id) == true)
             {
                 usinguser = checkinguser;
             }
@@ -28,8 +28,8 @@ void Logout(string id, User* userlist)
 {
 
     FindUser(id,userlist);
-    if(usinguser.CheckLogin() == True)
+    if(usinguser.CheckLogin() == true)
     {
-        usinguser.nowlogin == 0;
+        usinguser.UserLogin();
     } 
 }

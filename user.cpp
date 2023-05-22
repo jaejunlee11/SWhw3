@@ -18,22 +18,56 @@ User::~User()
 
 }
 
-void User::CheckIDInfo() 
+bool User::CheckIDInfo(string inputid) 
 {
-
+    if(inputid == id)
+        {
+            return true;
+        }
+    else
+    {
+        return false;
+    }
 }
 
-void User::CheckLogin() 
+bool User::CheckIDPWInfo(string inputid, string inputpw) 
 {
+    if(inputid == id)
+        {
+            if(inputpw == pw)
+            {
+                return true;
+            }
+        }
+    else
+    {
+        return false;
+    }
+}
 
+bool User::CheckLogin() 
+{
+    if(nowlogin == 1)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 void User::RevokePermission(string ID) 
 {
-
+    permission = 0;
 }
 
 void User::UserLogout() 
 {
+    nowlogin = 0;
+}
 
+void User::UserLogin() 
+{
+    nowlogin = 1;
 }

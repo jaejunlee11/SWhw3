@@ -8,6 +8,6 @@ using namespace std;
 
 void RequestLogout(string id, User* userlist)
 {
-    Login(id,userlist);
+    Logout(id,userlist);
 }
 
