@@ -2,7 +2,7 @@
 #include "ApplymentInformation.h"
 class ApplymentInformationCollection {
 private:
-    ApplymentInformation* managedApplymentInformation[];
+    ApplymentInformation* managedApplymentInformation[50];
     int numApplymentInformation = 0;
 public:
     ApplymentInformation findFirst();

@@ -3,26 +3,25 @@
 #include "ApplymentInquiry.h"
 #include "NormalUser.h"
 
+int cmp(format a, format b)
+{
+	return a.name < b.name;
+}
 
 void ApplymentInquiry::run(NormalUser*normaluser) {
-	ApplymentInformation applyInfo;
-	format infoArr[];
+	applymentInquiryUI=ApplymentInquiryUI();
+	format infoArr[50];
 	
 	this->normalUser = normaluser;
 	applyInfoCollection = normalUser->listApplymentInformation();
 
-	applyInfo = applyInfoCollection.findFirst();
-	format infoArr[0] = applyInfo.getFormat();
+	ApplymentInformation applyInfo = applyInfoCollection.findFirst();
+	infoArr[0] = applyInfo.getApplymentInformation();
 	int count = applyInfoCollection.getSize();
 
-	for (i = 1; i < count; i++) {
+	for (int i = 1; i < count; i++) {
 		applyInfo = applyInfoCollection.getNext();
-		infoArr[i] = applyInfo.getFormat();
-	}
-
-	int cmp(format a, format b)
-	{
-		return a.name < b.name;
+		infoArr[i] = applyInfo.getApplymentInformation();
 	}
 
 	sort(infoArr, infoArr + count, cmp);

@@ -17,6 +17,6 @@ void EmploymentRegister::addEmploymentInformation(string work,int peopleNumber,s
 */
 void EmploymentRegister::run(BusinessUser *businessUser){
     this->businessUser=businessUser;
-    employmentRegisterUI=new EmploymentRegisterUI();
-    employmentRegisterUI->registerEmploymentInformation(this);
+    employmentRegisterUI=EmploymentRegisterUI();
+    employmentRegisterUI.registerEmploymentInformation(this);
 }
