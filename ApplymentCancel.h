@@ -7,10 +7,10 @@ using namespace std;
 
 class ApplymentCancel {
     private:
-        NormalUser* currentUser;
+        NormalUser* normalUser;
         ApplymentInformation applymentInformation;
     public: 
         void cancelApplyment(int cancelNum);
-        void run();
+        void run(normalUser);
 
 };

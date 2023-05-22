@@ -3,8 +3,10 @@
 class ApplymentInformationCollection {
 private:
     ApplymentInformation* managedApplymentInformation[];
+    int numApplymentInformation = 0;
 public:
     ApplymentInformation findFirst();
     ApplymentInformation getNext();
+    int getSize();
     ApplymentInformation addApplymentInformation(string work, int peopleNumber, string deadline, string companyName, int businessNumber);
 }; 

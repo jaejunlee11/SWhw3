@@ -3,5 +3,5 @@
 
 class ApplymentInquiryUI {
 	public:
-		void showApplymentList();
+		void showApplymentList(format array[], int count);
 };
