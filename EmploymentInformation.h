@@ -8,10 +8,9 @@ class EmploymentInformation{
         string work;
         int peopleNumber;
         string deadline;
-        string name;
-        bool isClosed;
+        string companyName;
         int businessNumber;
     public:
-        EmploymentInformation(string work,int peopleNumber,string deadline,string name,bool isClosed,int businessNumber);
+        EmploymentInformation(string work,int peopleNumber,string deadline,string companyName,int businessNumber);
 
 };
