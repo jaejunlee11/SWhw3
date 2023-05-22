@@ -9,7 +9,12 @@
 void EmploymentRegister::addEmploymentInformation(string work,int peopleNumber,string deadline){
     businessUser->addNewEmploymentInformation(work,peopleNumber,deadline);
 };
-
+/*
+	함수 이름 : EmploymentRegister::run()
+	기능	  : control class생성 후 채용정보등록 실행
+	전달 인자 : businessUser->현재 로그인한 businessUser
+	반환값    : 없음
+*/
 void EmploymentRegister::run(BusinessUser *businessUser){
     this->businessUser=businessUser;
     employmentRegisterUI=new EmploymentRegisterUI();

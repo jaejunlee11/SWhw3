@@ -8,8 +8,9 @@ using namespace std;
 
 #include "user.h"
 
-string DropID;
+std::string dropid;
 User usinguser;
-void Dropout(string DropID);
+User* userlist;
+void Dropout(std::string dropid,User* userlist);
 
 #endif

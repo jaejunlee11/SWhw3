@@ -7,7 +7,7 @@ class EmploymentInformationCollection{
     public:
         EmploymentInformation findFirst();
         EmploymentInformation getNext();
-        EmploymentInformation addEmploymentInformation(string work,int peopleNumber,string deadline, string companyName,int businessNumber);
+        void addEmploymentInformation(string work,int peopleNumber,string deadline, string companyName,int businessNumber);
         EmploymentInformationCollection(){
             numEmploymentInformation=0;
         };
