@@ -10,16 +10,17 @@ using namespace std;
 // 상수 선언
 #define MAX_NUMBER_OF_USERS 1000
 
-int BizNo;
-int SSN;
-string CompnayName;
-string Name;
-string ID;
-string PW;
+int businessnumber;
+int ssn;
+string companyname;
+string name;
+string id;
+string pw;
 User newuser;
-User[] Users = new User[MAX_NUMBER_OF_USERS];
+User* userlist;
+int membernum;
 int usernum = 0;
-void BusinessRegister(string ID, string PW, string Name, int BizNo);
-void NormalRegister(string ID, string PW, string Name, int SSN);
+void BusinessRegister(string id, string pw, string name, int businessnumber,User* userlist, int membernum);
+void NormalRegister(string id, string pw, string name, int ssn, User* userlist, int membernum);
 
 #endif

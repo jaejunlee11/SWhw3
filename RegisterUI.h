@@ -6,13 +6,15 @@
 #include <string>
 using namespace std;
 
-int Choice;
-int UniNo;
-string Name;
-string ID;
-string PW;
+int choice;
+int unino;
+string name;
+string id;
+string pw;
+User* userList;
+int membernum;
 
-void RequestRegister(int Choice, string ID, string PW, string Name, int UniNo);
+void RequestRegister(int choice, string id, string pw, string name, int unino, User* userList, int membernum);
 
 
 #endif
