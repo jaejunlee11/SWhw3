@@ -13,5 +13,5 @@ class EmploymentRegister{
         EmploymentInformation *employmentInformation;
     public:
         void addEmploymentInformation(string work,int peopleNumber,string deadline);
-        void run();
+        void run(BusinessUser *businessUser);
 };
