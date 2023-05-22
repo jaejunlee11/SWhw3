@@ -6,8 +6,8 @@ using namespace std;
 
 class User{
     private:
-        string ID;
-        string PW;
+        string id;
+        string pw;
         int nowlogin;
         int permission;
     public:
@@ -17,6 +17,6 @@ class User{
 
         void CheckIDInfo();
         void CheckLogin();
-        void RevokePermission(string ID);
+        void RevokePermission(string id);
         void UserLogout();   
 }
