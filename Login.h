@@ -1,16 +1,21 @@
 #ifndef LOGIN_H
 #define LOGIN_H
-
 // 헤더 선언
-#include <stdio.h>
+#include <iostream>
 #include <string>
+#include "LoginUI.h"
+#include "Login.h"
+#include "UserList.h"
 using namespace std;
+// control 클래스 정의
+class Login{
+    private:
+        LoginUI loginUI;
+        User *user;
+        UserList *userList;
 
-#include "user.h"
-
-std::string id;
-std::string pw;
-User* userlist;
-void Login(string id, string pw,User* userlist);
-
+    public:
+        void performLoginProcess(string id, string pw);
+        void run(UserList *userList);
+};
 #endif

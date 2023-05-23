@@ -2,15 +2,20 @@
 #define DROPOUT_H
 
 // 헤더 선언
-#include <stdio.h>
+#include <iostream>
 #include <string>
+#include "DropoutUI.h"
+#include "User.h"
+#include "UserList.h"
 using namespace std;
 
-#include "user.h"
-
-std::string dropid;
-User usinguser;
-User* userlist;
-void Dropout(std::string dropid,User* userlist);
-
+// control 클래스 정의
+class Dropout{
+    private:
+        DropoutUI dropoutUI;
+        User *user;
+        UserList *userList;
+    public:
+        void deleteUserPermission(string id);
+        void run(UserList *userlist);
 #endif

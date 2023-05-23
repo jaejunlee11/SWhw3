@@ -2,12 +2,14 @@
 #define DROPOUTUI_H
 
 // 헤더 선언
-#include <stdio.h>
-#include <string>
-using namespace std;
-
-string id;
-User* userlist;
-void RequestDropout(string id,User* userlist);
+#include <iostream>
+// 입출력을 위한 boundary클래스 정의
+class DropoutUI
+{
+    private:
+        Dropout *dropout;
+    public:
+        void userDropout(Dropout *dropout); 
+};
 
 #endif

@@ -1,35 +1,31 @@
 // 헤더 선언
-#include <stdio.h>
-#include <string.h>
-using namespace std;
-
-#include "User.h"
-#include "User.cpp"
-
-
-User usinguser;
-User checkinguser;
-void FindUser(string id, User* userlist)
-    {
-        int i =0;
-        while(&userlist[i] != NULL)
-        {
-            checkinguser = userlist[i];
-            if(checkinguser.CheckIDInfo() == id)
-            {
-                usinguser = checkinguser;
-            }
-            i++;
-        }
-    }
-
-
-void Login(string id, string pw, User* userlist)
+#include "Login.h"
+/*
+	함수 이름 : Login::performLoginProcess()
+	기능	  : 
+	전달 인자 : 
+	반환값    : 없음
+*/
+void performLoginProcess(string id, string pw)
 {
-
-    FindUser(id,userlist);
-    if(usinguser.CheckLogin() == True)
+    User target;
+    bool avaliability;
+    target = userList->finduser(id);
+    avaliability = target->checkIDInfo(pw);
+    if(avaliability == true)
     {
-        usinguser.nowlogin == 1;
-    } 
+        target->changeLoginState();
+        userList->changeCurrentUser(target);
+    }
+};
+/*
+	함수 이름 : Login::run()
+	기능	  : 
+	전달 인자 : 
+	반환값    : 없음
+*/
+void Login::run(UserList *userList){
+    this->userList=userList;
+    loginUI=LoginUI();
+    loginUI.showLoginProcess(this);
 }

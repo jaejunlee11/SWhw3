@@ -2,10 +2,34 @@
 #define REGISTER_H
 
 // 헤더 선언
-#include <stdio.h>
+#include <iostream>
 #include <string>
-using namespace std;
-#include "user.h"
+#include "RegisterUI.h"
+#include "UserList.h"
+
+//control 클래스 정의
+class UserRegister{
+    private:
+        UserRegisterUI userRegisterUI;
+        UserList *userList;
+    public:
+        void addBusinessUser(string name, int businessnumber, string id, string pw);
+        void addNormalUser(string name, int SSN, string id, string pw);
+        void run(UserList *userList);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 // 상수 선언
 #define MAX_NUMBER_OF_USERS 1000
@@ -22,5 +46,6 @@ int membernum;
 int usernum = 0;
 void BusinessRegister(string id, string pw, string name, int businessnumber,User* userlist, int membernum);
 void NormalRegister(string id, string pw, string name, int ssn, User* userlist, int membernum);
+*/
 
 #endif

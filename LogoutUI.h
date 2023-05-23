@@ -2,14 +2,14 @@
 #define LOGOUTUI_H
 
 // 헤더 선언
-#include <stdio.h>
-#include <string>
-using namespace std;
-
-#include "user.h"
-
-std::string id;
-User* userlist;
-void RequestLogout(string id,User* userlist);
+#include <iostream>
+// boundary클래스 정의
+class LogoutUI
+{
+    private:
+        Logout *logout;
+    public:
+        void showLogoutProcess(Logout *logout); 
+};
 
 #endif

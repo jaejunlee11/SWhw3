@@ -5,7 +5,7 @@
 #include <iostream>
 
 using namespace std;
-#include "user.h"
+#include "User.h"
 
 User::User() 
 {
@@ -18,36 +18,9 @@ User::~User()
 
 }
 
-bool User::CheckIDInfo(string inputid) 
+bool User::checkIDInfo(string inputpw) 
 {
-    if(inputid == id)
-        {
-            return true;
-        }
-    else
-    {
-        return false;
-    }
-}
-
-bool User::CheckIDPWInfo(string inputid, string inputpw) 
-{
-    if(inputid == id)
-        {
-            if(inputpw == pw)
-            {
-                return true;
-            }
-        }
-    else
-    {
-        return false;
-    }
-}
-
-bool User::CheckLogin() 
-{
-    if(nowlogin == 1)
+    if(inputpw == User.pw)
     {
         return true;
     }
@@ -57,17 +30,20 @@ bool User::CheckLogin()
     }
 }
 
-void User::RevokePermission(string ID) 
+
+void User::changeLoginState() 
+{
+    if(nowlogin == 1)
+    {
+        nowlogin == 0;
+    }
+    else
+    {
+        nowlogin == 1;
+    }
+}
+
+void User::revokePermission() 
 {
     permission = 0;
-}
-
-void User::UserLogout() 
-{
-    nowlogin = 0;
-}
-
-void User::UserLogin() 
-{
-    nowlogin = 1;
 }
