@@ -11,7 +11,7 @@ class EmploymentStatistic
 {
     private:
         BusinessUser *businessUser;
-        EmploymentInformation employmentInformation;
+        EmploymentInformation* employInfo;
         EmploymentStatisticUI employmentStatisticUI;
         EmploymentInformationCollection employmentInformationCollection;
     public:

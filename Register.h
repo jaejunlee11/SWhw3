@@ -49,5 +49,3 @@ int usernum = 0;
 void BusinessRegister(string id, string pw, string name, int businessnumber,User* userlist, int membernum);
 void NormalRegister(string id, string pw, string name, int ssn, User* userlist, int membernum);
 */
-
-#endif

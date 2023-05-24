@@ -16,7 +16,7 @@ void UserList::addNewNormalUsertoList(string name, int ssn, string id, string pw
     normalUserCollection->addNewNormalUser(name,ssn,id,pw);
 }
 
-void UserList::dropoutUser();
+void UserList::dropoutUser()
 {
     
 }

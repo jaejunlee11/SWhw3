@@ -10,7 +10,7 @@ class ApplymentStatistics
 {
     private:
         NormalUser *normalUser;
-        ApplymentInformation applymentInformation;
+        ApplymentInformation* applyInfo;
         ApplymentStatisticsUI applymentStatisticsUI;
         ApplymentInformationCollection applymentInformationCollection;
     public:
