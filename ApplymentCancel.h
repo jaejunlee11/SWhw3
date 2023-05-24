@@ -4,6 +4,7 @@
 #include <string>
 #include "ApplymentInformation.h"
 #include "ApplymentCancelUI.h"
+#include "ApplymentInformationCollection.h"
 #include "NormalUser.h"
 
 using namespace std;
@@ -15,6 +16,6 @@ class ApplymentCancel {
         ApplymentCancelUI applymentCancelUI;
         ApplymentInformationCollection applyInfoCollection;
     public: 
-        void cancelApplyment(int cancelNum);
+        format cancelApplyment(int cancelNum);
         void run(NormalUser* normalUser);
 };
