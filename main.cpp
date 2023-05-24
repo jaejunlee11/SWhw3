@@ -10,7 +10,7 @@ using namespace std;
 // 상수 선언
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
-#define MAX_NUMBER_OF_USERS 1000
+#define MAX_NUMBER_OF_USERS 50
 // 함수 선언
 void doTask();
 void RequestRegister();
@@ -20,8 +20,11 @@ void program_exit();
 FILE* in_fp, *out_fp;
 BusinessUser* currentUser; //현재 로그인 중인 User
 NormalUser* currntUser;
-User* currentUser; //현재 로그인 중인 User
-User*  userList= new User[MAX_NUMBER_OF_USERS];
+BusinessUser* businessList[MAX_NUMBER_OF_USERS];
+NormalUser* normalList[MAX_NUMBER_OF_USERS];
+
+// User* currentUser; //현재 로그인 중인 User
+// User*  userList= new User[MAX_NUMBER_OF_USERS];
 
 int   membernum;
 int main()

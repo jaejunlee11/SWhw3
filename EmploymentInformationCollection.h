@@ -6,9 +6,10 @@ class EmploymentInformationCollection{
     private:
         EmploymentInformation* managedEmploymentInformation[50];
         int numEmploymentInformation;
+        int now;
     public:
-        EmploymentInformation findFirst();
-        EmploymentInformation getNext();
+        EmploymentInformation* findFirst();
+        EmploymentInformation* getNext();
         int getSize();
         void addEmploymentInformation(string work,int peopleNumber,string deadline, string companyName,int businessNumber);
         EmploymentInformationCollection(){

@@ -19,3 +19,24 @@ void EmploymentInformationCollection::addEmploymentInformation(string work,int p
 int EmploymentInformationCollection::getSize(){
     return numEmploymentInformation;
 };
+
+/*
+	함수 이름 : EmploymentInformationCollection::findFirst()
+	기능	  : numEmploymentInformation의 첫번째를 return
+	전달 인자 : 없음
+	반환값    : numEmploymentInformation[0]
+*/
+EmploymentInformation* EmploymentInformationCollection::findFirst(){
+	now=0;
+	return managedEmploymentInformation[0];
+};
+/*
+	함수 이름 : EmploymentInformationCollection::findFirst()
+	기능	  : numEmploymentInformation의 다음 것을 return
+	전달 인자 : 없음
+	반환값    : numEmploymentInformation[now]->출력하고 다음 것을 리턴
+*/
+EmploymentInformation* EmploymentInformationCollection::getNext(){
+	now+=1;
+	return managedEmploymentInformation[now];
+};
