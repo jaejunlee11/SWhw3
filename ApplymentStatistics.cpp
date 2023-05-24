@@ -21,7 +21,7 @@ void ApplymentStatistics::run(NormalUser *normalUser){
     //user의 listEmploymentInformation을 저장
 	applymentInformationCollection = normalUser->listApplymentInformation();
     //리스트를 loop를 돌며 모든 지원 정보 통계 저장
-    ApplymentInformation* applyInfo = applymentInformationCollection.findFirst();
+    applyInfo = applymentInformationCollection.findFirst();
 	infoArr[0] = applyInfo->getApplymentInformation();
     work[workCount]=infoArr[0].work;
     applyTime[workCount]=1;
