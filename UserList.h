@@ -27,7 +27,7 @@ class UserList{
 
         //회원탈퇴용 함수
         void changePermissionState();
-        void dropoutUser(User* currentuser,User7);
+        void dropoutUser(User* currentuser,User);
 
         //회원가입용 함수
         void addNewBusinessUsertoList(string name, int businessnumber,string id,string pw);

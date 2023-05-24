@@ -4,8 +4,7 @@
 using namespace std;
 
 #include "Register.h"
-#include "BusinessUser.h"
-#include "NormalUser.h"
+
 
 /*
 	함수 이름 : UserRegister::addNewBusinessUser()
@@ -13,14 +12,14 @@ using namespace std;
 	전달 인자 : 
   반환값 : 없음
 */
-void addBusinessUser(string name, int businessnumber, string id, string pw)
+void UserRegister::addBusinessUser(string name, int businessnumber, string id, string pw)
 {
-  userList->addNewBusinessUsertoList(name, businessnumber, id, pw);
+  businessUserCollection.addNewBusinessUser(name, businessnumber, id, pw);
 };
 
-void addNormalsUser(string name, int SSN, string id, string pw)
+void UserRegister::addNormalUser(string name, int SSN, string id, string pw)
 {
-  userList->addNewNormalUsertoList(name, SSN, id, pw);
+  normalUserCollection.addNewNormalUser(name, SSN, id, pw);
 };
 
 
@@ -39,14 +38,10 @@ void addNormalsUser(string name, int SSN, string id, string pw)
 	전달 인자 : 
 	반환값    : 없음
 */
-void UserRegister::run(UserList *userList)
+void UserRegister::businessRun(BusinessUser* businessuserB);
 {
-    this->userList=userList;
-    userRegisterUI=UserRegisterUI();
-    userRegisterUI.newUserRegister(this);
+
 };
-
-
 
 
 

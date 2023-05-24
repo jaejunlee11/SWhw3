@@ -10,11 +10,14 @@
 class UserRegister{
     private:
         UserRegisterUI userRegisterUI;
-        UserList *userList;
+        NormalUserCollection normalUserCollection;
+        BusinessUserCollection businessUserCollection;
+
     public:
         void addBusinessUser(string name, int businessnumber, string id, string pw);
         void addNormalUser(string name, int SSN, string id, string pw);
-        void run(UserList *userList);
+        void businessRun(BusinessUser* businessuserB);
+        void normalRun(NormalUser* currentuserN);
 };
 
 
