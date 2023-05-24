@@ -1,73 +1,28 @@
+//중복방지
+#pragma once
 // 헤더 선언
-// User list의 필요성과 그걸 보관할 장소의 부재?
-#include <stdio.h>
-#include <string>
 #include <iostream>
-
+#include <string>
 using namespace std;
-#include "User.h"
-
-User::User() 
+//구조체 정의
+struct Employee
 {
-    nowlogin = 0;
-    permission = 1;
-}
-
-User::~User() 
-{
-
-}
-
-bool User::CheckIDInfo(string inputid) 
-{
-    if(inputid == id)
-        {
-            return true;
-        }
-    else
-    {
-        return false;
-    }
-}
-
-bool User::CheckIDPWInfo(string inputid, string inputpw) 
-{
-    if(inputid == id)
-        {
-            if(inputpw == pw)
-            {
-                return true;
-            }
-        }
-    else
-    {
-        return false;
-    }
-}
-
-bool User::CheckLogin() 
-{
-    if(nowlogin == 1)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-
-void User::RevokePermission(string ID) 
-{
-    permission = 0;
-}
-
-void User::UserLogout() 
-{
-    nowlogin = 0;
-}
-
-void User::UserLogin() 
-{
-    nowlogin = 1;
-}
+    string work;
+    int peopleNumber;
+    string deadline;
+    string companyName;
+    int businessNumber;
+};
+// 채용정보를 위해 EmploymenduhtInformation 클래스 정의
+class EmploymentInformation{
+    private:
+        string work;
+        int peopleNumber;
+        string deadline;
+        string companyName;
+        int businessNumber;
+        Employee x;
+    public:
+        EmploymentInformation(string work,int peopleNumber,string deadline,string companyName,int businessNumber);
+        Employee getEmploymentInformation();
+};
