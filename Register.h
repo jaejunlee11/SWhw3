@@ -12,11 +12,13 @@ class UserRegister{
         UserRegisterUI userRegisterUI;
         NormalUserCollection normalUserCollection;
         BusinessUserCollection businessUserCollection;
+        BusinessUser* businessuserB;
+        NormalUser* normaluserN;
 
     public:
         void addBusinessUser(string name, int businessnumber, string id, string pw);
         void addNormalUser(string name, int SSN, string id, string pw);
-        void businessRun(BusinessUser* businessuserB);
+        void businessRun(BusinessUser* currentuserB);
         void normalRun(NormalUser* currentuserN);
 };
 

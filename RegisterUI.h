@@ -4,10 +4,9 @@
 #define REGISTERUI_H
 
 // 헤더 선언
-#include <stdio.h>
 #include <string>
-using namespace std;
 #include <iostream>
+using namespace std;
 
 //입출력을 위한 REGISTERUI boundary class 정의
 class UserRegisterUI

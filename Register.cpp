@@ -38,9 +38,11 @@ void UserRegister::addNormalUser(string name, int SSN, string id, string pw)
 	전달 인자 : 
 	반환값    : 없음
 */
-void UserRegister::businessRun(BusinessUser* businessuserB);
+void UserRegister::businessRun(BusinessUser* businessuserB)
 {
-
+  this->businessuserB=businessuserB;
+  userRegisterUI=UserRegisterUI();
+  userRegisterUI.newUserRegister(this);
 };
 
 
