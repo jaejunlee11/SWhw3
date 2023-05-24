@@ -5,9 +5,12 @@
 class ApplymentInformationCollection {
 private:
     ApplymentInformation* managedApplymentInformation[50];
-    int numApplymentInformation = 0;
+    int numApplymentInformation;
     int now;
 public:
+    ApplymentInformationCollection(){
+        numApplymentInformation=0;
+    };
     ApplymentInformation* findFirst();
     ApplymentInformation* getNext();
     int getSize();

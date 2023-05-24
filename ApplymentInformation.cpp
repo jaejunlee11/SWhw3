@@ -12,5 +12,14 @@ format ApplymentInformation::getApplymentInformation() {
 }
 
 void ApplymentInformation::cancelApplymentInformation() {
-	isCancel = 0;
+	isCancel = true;
 }
+
+ApplymentInformation:: ApplymentInformation(string work, int peopleNumber, string deadline, string name,bool isCancel, int businessNumber){
+	this->work=work;
+	this->peopleNumber=peopleNumber;
+	this->deadline=deadline;
+	this->name=name;
+	this->isCancel=isCancel;
+	this->businessNumber=businessNumber;
+};

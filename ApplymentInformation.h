@@ -18,13 +18,13 @@ private:
     string work;
     int peopleNumber;
     string deadline;
-    bool isCancel = 0;
+    bool isCancel;
     int businessNumber;
     
     format x;
 
 public:
-    ApplymentInformation(string work, int peopleNumber, string deadline, string name, bool isClosed, int businessNumber);
+    ApplymentInformation(string work, int peopleNumber, string deadline, string name, bool isCancel, int businessNumber);
     format getApplymentInformation();
     void cancelApplymentInformation();
 };
