@@ -1,11 +1,10 @@
 // 헤더 선언
-#include <stdio.h>
-#include <string>
-using namespace std;
+
 
 #include "RegisterUI.h"
 #include "Register.h"
-
+#include <string>
+using namespace std;
 //상수 선언
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
