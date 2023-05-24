@@ -1,6 +1,7 @@
 //중복방지
 #pragma once
 #include <iostream>
+#include "ApplymentCancel.h"
 
 class ApplymentCancel;
 
