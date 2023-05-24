@@ -1,6 +1,5 @@
 // 헤더 선언
 #include "EmploymentRegisterUI.h"
-#include "EmploymentRegister.h"
 #include <string>
 using namespace std;
 // 상수 선언

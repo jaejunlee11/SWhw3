@@ -1,6 +1,5 @@
-#ifndef LOGOUT_H
-#define LOGOUTj_H
-
+//중복방지
+#pragma once
 // 헤더 선언
 #include <stdio.h>
 #include <string>

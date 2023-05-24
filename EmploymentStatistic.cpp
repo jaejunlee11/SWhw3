@@ -2,7 +2,6 @@
 #include "EmploymentStatistic.h"
 #include "EmploymentInformation.h"
 #include "EmploymentStatisticUI.h"
-
 /*
 	함수 이름  : EmploymentStatistic::run()
 	기능	  : control class생성 후 채용정보통계기능 실행

@@ -1,3 +1,5 @@
+//중복방지
+#pragma once
 #include <iostream>
 #include "ApplymentInformation.h"
 class ApplymentInformationCollection {

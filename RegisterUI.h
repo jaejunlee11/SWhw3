@@ -1,3 +1,5 @@
+//중복방지
+#pragma once
 #ifndef REGISTERUI_H
 #define REGISTERUI_H
 
