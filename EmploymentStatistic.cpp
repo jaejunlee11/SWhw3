@@ -23,8 +23,8 @@ void EmploymentStatistic::run(BusinessUser *businessUser){
     //user의 listEmploymentInformation을 저장
 	employmentInformationCollection = businessUser->listEmploymentInformation();
     //리스트를 loop를 돌며 모든 채용 정보 통계 저장
-	EmploymentInformation employInfo = employmentInformationCollection.findFirst();
-	infoArr[0] = employInfo.getEmploymentInformation();
+	EmploymentInformation* employInfo = employmentInformationCollection.findFirst();
+	infoArr[0] = employInfo->getEmploymentInformation();
     work[workCount]=infoArr[0].work;
     people[workCount]=infoArr[0].peopleNumber;
     workCount+=1;
@@ -32,7 +32,7 @@ void EmploymentStatistic::run(BusinessUser *businessUser){
 	for (int i = 1; i < count; i++) {
         newWork=true;
 		employInfo = employmentInformationCollection.getNext();
-		infoArr[i] = employInfo.getEmploymentInformation();
+		infoArr[i] = employInfo->getEmploymentInformation();
         for(int j=0; j<workCount;j++){
             if(work[j]==infoArr[i].work){
                 people[j]+=infoArr[i].peopleNumber;
