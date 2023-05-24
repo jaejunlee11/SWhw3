@@ -19,9 +19,9 @@ User::~User()
 
 }
 
-bool User::checkIDInfo(string inputpw) 
+bool User::checkIDInfo(string id, string pw) 
 {
-    if(inputpw == this->pw)
+    if(id == this->id && pw == this->pw)
     {
         return true;
     }
@@ -47,4 +47,9 @@ void User::changeLoginState()
 void User::revokePermission() 
 {
     permission = 0;
+}
+
+string User::showid() 
+{
+    return id;
 }

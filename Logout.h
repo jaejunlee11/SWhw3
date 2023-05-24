@@ -5,15 +5,18 @@
 #include <string>
 #include "LogoutUI.h"
 #include "Logout.h"
-#include "UserList.h"
+#include "BusinessUser.h"
+#include "NormalUser.h"
 using namespace std;
 //  control 클래스 정의
 class Logout{
     private:
         LogoutUI logoutUI;
-        User *user;
-        UserList *userList;        
+        BusinessUser *businessuser;
+        NormalUser *normaluser;
     public:
-        void performLogoutProcess(string id);
-        void run(UserList *userList);
+        string performNormalUserLogout();
+        string performBusinessUserLogout();
+        void normalRun(NormalUser *normaluser);
+        void businessRun(BusinessUser *businessuser);
 };

@@ -2,13 +2,15 @@
 #pragma once
 // 헤더 선언
 #include <iostream>
+#include "Dropout.h"
+
 // 입출력을 위한 boundary클래스 정의
 class DropoutUI
 {
     private:
         Dropout *dropout;
     public:
-        void userDropout(Dropout *dropout); 
+        void normalUserDropout(Dropout *dropout); 
+        void businessUserDropout(Dropout *dropout);
 };
 
-#endif

@@ -23,3 +23,19 @@ int NormalUserCollection::getSize()
 {
     return numNormalUser;
 }
+
+NormalUser* NormalUserCollection::findNormalUser(string id, string pw)
+{
+    NormalUser* checkuser;
+    checkuser = this->findFirst();
+    int i=0;
+    while(checkuser->checkIDInfo(id,pw)!=true && i<numNormalUser)
+    {
+        checkuser = this->getNext();
+        i++;
+    }
+    if(i<numNormalUser)
+    {
+        return checkuser;
+    }
+}

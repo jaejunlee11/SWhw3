@@ -4,17 +4,19 @@
 #include <iostream>
 #include <string>
 #include "LoginUI.h"
-#include "Login.h"
-#include "UserList.h"
+#include "BusinessUserCollection.h"
+#include "NormalUserCollection.h"
 using namespace std;
 // control 클래스 정의
 class Login{
     private:
         LoginUI loginUI;
-        User *user;
-        UserList *userList;
+        BusinessUser* businessuser;
+        NormalUser* normaluser;
+        NormalUserCollection* normalusercollection;
+        BusinessUserCollection* businessusercollection;
 
     public:
-        void performLoginProcess(string id, string pw);
-        void run(UserList *userList);
+        User* performLoginProcess(string id, string pw);
+        void run(BusinessUser* businessuserB,NormalUser* normaluserN);
 };

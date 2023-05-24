@@ -4,17 +4,22 @@
 #include <iostream>
 #include <string>
 #include "DropoutUI.h"
-#include "User.h"
-#include "UserList.h"
+#include "NormalUserCollection.h"
+#include "BusinessUserCollection.h"
 using namespace std;
 
 // control 클래스 정의
 class Dropout{
     private:
         DropoutUI dropoutUI;
-        User *user;
-        UserList *userList;
+        NormalUserCollection normalUserCollection;
+        BusinessUserCollection businessUserCollection;
+        BusinessUser* businessuserB;
+        NormalUser* normaluserN;
+
     public:
-        void deleteUserPermission(string id);
-        void run(UserList *userlist);
-#endif
+        string deleteBusinessUserPermission();
+        string deleteNormalUserPermission();
+        void businessRun(BusinessUser* businessuser);
+        void normalRun(NormalUser* normaluser);
+};

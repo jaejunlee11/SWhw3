@@ -23,3 +23,19 @@ int BusinessUserCollection::getSize()
 {
     return numBusinessUser;
 }
+
+BusinessUser* BusinessUserCollection::findBusinessUser(string id, string pw)
+{
+    BusinessUser* checkuser;
+    checkuser = this->findFirst();
+    int i=0;
+    while(checkuser->checkIDInfo(id,pw)!=true && i<numBusinessUser)
+    {
+        checkuser = this->getNext();
+        i++;
+    }
+    if(i<numBusinessUser)
+    {
+        return checkuser;
+    }
+}

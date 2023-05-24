@@ -15,6 +15,7 @@ public:
     BusinessUser* getNext();
     int getSize();
     void addNewBusinessUser(string name,int businessnumber, string id, string pw);
+    BusinessUser* findBusinessUser(string id,string pw);
     BusinessUserCollection()
     {
         numBusinessUser = 0;

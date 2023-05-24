@@ -6,12 +6,20 @@
 	전달 인자 : 
 	반환값    : 없음
 */
-void performLogoutProcess(string id)
+string Logout::performNormalUserLogout()
 {
-    User target;
-    target = userList->finduser(id);
-    target->changeLoginState();
-    userList->clearCurrentUser();
+	string id;
+	normaluser->changeLoginState();
+	id = normaluser->showid();
+	return id;
+};
+
+string Logout::performBusinessUserLogout()
+{
+	string id;
+	businessuser->changeLoginState();
+	id = businessuser->showid();
+	return id;
 };
 /*
 	함수 이름 : Login::run()
@@ -19,8 +27,16 @@ void performLogoutProcess(string id)
 	전달 인자 : 
 	반환값    : 없음
 */
-void Logout::run(UserList *userList){
-    this->userList=userList;
+void Logout::normalRun(NormalUser *normaluserN)
+{
+    this->normaluser=normaluserN;
     logoutUI=LogoutUI();
-    logoutUI.showLogoutProcess(this);
+    logoutUI.normalUserLogout(this);
+}
+
+void Logout::businessRun(BusinessUser *businessuserB)
+{
+	this->businessuser=businessuserB;
+	logoutUI=LogoutUI();
+	logoutUI.businessUserLogout(this);
 }

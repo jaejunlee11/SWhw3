@@ -12,16 +12,29 @@ using namespace std;
 	전달 인자 : 
 	반환값    : 없음
 */
-void LogoutUI::showLogoutProcess(Logout *LogoutControl)
+void LogoutUI::normalUserLogout(Logout *LogoutControl)
 {
 	logout=LogoutControl;
 	// 파일 입출력을 위한 초기화
-    FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
+    //FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
     FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
     string id;
-	// 업무, 인원수, 신청 마감일 입력
-	fscanf(in_fp, "%s", id);
-    logout->performLogoutProcess(id);
+	//fscanf(in_fp, "%s", id);
+    id = logout->performNormalUserLogout();
+	// 출력
+	fprintf(out_fp, "2.2. 로그아웃\n");
+	fprintf(out_fp, "%s %d %s\n", id);
+};
+
+void LogoutUI::businessUserLogout(Logout *LogoutControl)
+{
+	logout=LogoutControl;
+	// 파일 입출력을 위한 초기화
+    //FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
+    FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
+    string id;
+	//fscanf(in_fp, "%s", id);
+    id = logout->performBusinessUserLogout();
 	// 출력
 	fprintf(out_fp, "2.2. 로그아웃\n");
 	fprintf(out_fp, "%s %d %s\n", id);

@@ -12,17 +12,19 @@ using namespace std;
 	전달 인자 : 
 	반환값    : 없음
 */
-void LoginUI::showLoginProcess(Login *loginControl)
+User* LoginUI::showLoginProcess(Login *loginControl)
 {
 	login=loginControl;
+	User* returnuser;
 	// 파일 입출력을 위한 초기화
     FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
     FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
 	string id,pw;
 
 	fscanf(in_fp, "%s %s", id, pw);
-    login->performLoginProcess(id,pw);
+    returnuser = login->performLoginProcess(id,pw);
 	// 출력
 	fprintf(out_fp, "2.1 로그인\n");
 	fprintf(out_fp, "%s %s\n", id,pw);
+	return returnuser;
 };

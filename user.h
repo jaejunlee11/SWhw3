@@ -18,8 +18,9 @@ class User{
 
         ~User();
 
-        bool checkIDInfo(string pw); //
+        bool checkIDInfo(string id, string pw); //
         void changeLoginState(); //
         void revokePermission(); //
+        string showid();
 
 };

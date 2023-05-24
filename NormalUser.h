@@ -7,12 +7,13 @@
 
 using namespace std;
 
-class NormalUser:User {
+class NormalUser: public User {
 	private:
 		string name;
 		int ssn;
 		ApplymentInformationCollection manageApplymentInformation;
 	public:
+		NormalUser();
 		NormalUser(string name, int ssn, string id, string pw);
 		ApplymentInformationCollection listApplymentInformation();
 		void addApplymentInformation();

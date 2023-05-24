@@ -1,4 +1,5 @@
 // 헤더 선언
+#include <cstdio>
 #include "DropoutUI.h"
 #include "Dropout.h"
 #include <string>
@@ -16,15 +17,29 @@ using namespace std;
 
 
 
-void DropoutUI::userDropout(Dropout *dropoutControl); 
+void DropoutUI::normalUserDropout(Dropout *dropoutControl) 
 {
 	dropout=dropoutControl;
 	// 파일 입출력을 위한 초기화
-    FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
+    //FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
     FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
     string id;
-	fscanf(in_fp, "%s", id);
-    dropout->deleteuserpermission(id);
+	//fscanf(in_fp, "%s", id);
+    id = dropout->deleteNormalUserPermission();
+	// 출력
+	fprintf(out_fp, "1.2. 회원탈퇴\n");
+	fprintf(out_fp, "%s\n", id);
+};
+
+void DropoutUI::businessUserDropout(Dropout *dropoutControl) 
+{
+	dropout=dropoutControl;
+	// 파일 입출력을 위한 초기화
+    //FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
+    FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
+    string id;
+	//fscanf(in_fp, "%s", id);
+    id = dropout->deleteBusinessUserPermission();
 	// 출력
 	fprintf(out_fp, "1.2. 회원탈퇴\n");
 	fprintf(out_fp, "%s\n", id);

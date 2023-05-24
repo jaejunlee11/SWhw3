@@ -6,17 +6,22 @@
 	전달 인자 : 
 	반환값    : 없음
 */
-void performLoginProcess(string id, string pw)
+User* Login::performLoginProcess(string id, string pw)
 {
-    User target;
-    bool avaliability;
-    target = userList->finduser(id);
-    avaliability = target->checkIDInfo(pw);
-    if(avaliability == true)
+    User* target;
+    target = businessusercollection->findBusinessUser(id,pw);
+    if (target != NULL)
     {
         target->changeLoginState();
-        userList->changeCurrentUser(target);
+        return target;
     }
+    target = normalusercollection->findNormalUser(id,pw);
+    if(target != NULL)
+    {
+        target->changeLoginState();
+        return target;
+    }
+    return NULL;
 };
 /*
 	함수 이름 : Login::run()
@@ -24,8 +29,12 @@ void performLoginProcess(string id, string pw)
 	전달 인자 : 
 	반환값    : 없음
 */
-void Login::run(UserList *userList){
-    this->userList=userList;
+void Login::run(BusinessUser* businessuserB,NormalUser* normaluserN)
+{
+    User *ans;
+    this->businessuser=businessuserB;
+    this->normaluser=normaluserN;
     loginUI=LoginUI();
-    loginUI.showLoginProcess(this);
+    ans = loginUI.showLoginProcess(this);
+    //다중 return?
 }

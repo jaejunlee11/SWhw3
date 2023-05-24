@@ -24,15 +24,7 @@ class UserList{
         //회원탈퇴/로그아웃용 함수
         BusinessUser getCurrentBusinessUser();
         NormalUser getCurrentNormalUser();
-
-        //회원탈퇴용 함수
-        void changePermissionState();
-        void dropoutUser(User* currentuser,User);
-
-        //회원가입용 함수
-        void addNewBusinessUsertoList(string name, int businessnumber,string id,string pw);
-        void addNewNormalUsertoList(string name, int SSN, string id, string PW);
-
+        
 };
 
 //구조 생성:

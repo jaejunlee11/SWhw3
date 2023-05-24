@@ -26,12 +26,6 @@ void UserRegister::addNormalUser(string name, int SSN, string id, string pw)
 
 
 
-
-
-
-
-
-
 /*
 	함수 이름 : UserRegister::run()
 	기능	  : control class생성 후 채용정보등록 실행
@@ -45,22 +39,12 @@ void UserRegister::businessRun(BusinessUser* businessuserB)
   userRegisterUI.newUserRegister(this);
 };
 
-
-
-/*
-void BusinessRegister(string id, string pw, string name, int businessnumber,User* Userlist, int membernum)
+void UserRegister::normalRun(NormalUser* normaluserN)
 {
- newuser = BusinessUser(id,pw,name,businessnumber);
- Userlist[membernum]= newuser;
- membernum++;
-
+  this->normaluserN=normaluserN;
+  userRegisterUI=UserRegisterUI();
+  userRegisterUI.newUserRegister(this);
 };
 
-void BusinessRegister(string id, string pw, string name, int ssn,User* Userlist, int membernum)
-{
-  newuser = NormalUser(id,pw,name,ssn);
-  Userlist[membernum]= newuser;
-  membernum++;
-  };
 
-*/
+

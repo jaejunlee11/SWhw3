@@ -15,6 +15,7 @@ public:
     NormalUser* getNext();
     int getSize();
     void addNewNormalUser(string name,int SSN, string id, string pw);
+    NormalUser* findNormalUser(string id,string pw);
     NormalUserCollection()
     {
         numNormalUser = 0;
