@@ -8,10 +8,11 @@ using namespace std;
 
 class User{
     private:
-        string id;
-        string pw;
         int nowlogin;
         int permission;
+    protected:
+        string id;
+        string pw;    
     public:
         User();
 

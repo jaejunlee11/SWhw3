@@ -1,27 +1,38 @@
 //중복방지
 #pragma once
 #include <iostream>
-#include "BusinessUser.h"
-#include "NormalUser.h"
-//상수선언
-#define MAX_NUMBER_OF_USER 50
+#include "BusinessUserCollection.h"
+#include "NormalUserCollection.h"
 
 class UserList{
     private:
-        User* managedUserList[MAX_NUMBER_OF_USER];
-        int numofUser;
+        BusinessUserCollection* businessUserCollection;
+        NormalUserCollection* normalUserCollection;
     public:
-        User findFirst();
-        User getNext();
+        //로그인용 함수
+        BusinessUser checkBusinessUserID(string id,string pw);
+        NormalUser  checkNormalUserID(string id,string pw);
+        
+
+        //로그아웃용 함수
+        BusinessUser clearCurrentBusinessUser();
+        NormalUser clearCurrentNormalUser();
+
+        //로그인/로그아웃용 함수
+        void changeLoginState();
+
+        //회원탈퇴/로그아웃용 함수
         BusinessUser getCurrentBusinessUser();
         NormalUser getCurrentNormalUser();
 
-        int getSize();
-        void addnewNormalUser(string name, int businessnumber,string id,string pw);
-        void addNewBusinessUser(string name, int SSN, string ID, string PW);
-        UserList(){
-            numofUser=0;
-        };
+        //회원탈퇴용 함수
+        void changePermissionState();
+        void dropoutUser(User* currentuser,User7);
+
+        //회원가입용 함수
+        void addNewBusinessUsertoList(string name, int businessnumber,string id,string pw);
+        void addNewNormalUsertoList(string name, int SSN, string id, string PW);
+
 };
 
 //구조 생성:
