@@ -21,7 +21,7 @@ User::~User()
 
 bool User::checkIDInfo(string inputpw) 
 {
-    if(inputpw == User.pw)
+    if(inputpw == this->pw)
     {
         return true;
     }
