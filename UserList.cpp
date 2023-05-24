@@ -4,25 +4,19 @@
 #include <iostream>
 #include <string>
 using namespace std;
-//구조체 정의
-struct Employee
+#include "UserList.h"
+
+void UserList::addNewBusinessUsertoList(string name, int businessnumber, string id , string pw)
 {
-    string work;
-    int peopleNumber;
-    string deadline;
-    string companyName;
-    int businessNumber;
-};
-// 채용정보를 위해 EmploymenduhtInformation 클래스 정의
-class EmploymentInformation{
-    private:
-        string work;
-        int peopleNumber;
-        string deadline;
-        string companyName;
-        int businessNumber;
-        Employee x;
-    public:
-        EmploymentInformation(string work,int peopleNumber,string deadline,string companyName,int businessNumber);
-        Employee getEmploymentInformation();
-};
+    businessUserCollection->addNewBusinessUser(name,businessnumber,id,pw);
+}
+
+void UserList::addNewNormalUsertoList(string name, int ssn, string id, string pw)
+{
+    normalUserCollection->addNewNormalUser(name,ssn,id,pw);
+}
+
+void UserList::dropoutUser();
+{
+    
+}

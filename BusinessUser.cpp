@@ -1,4 +1,11 @@
 #include "BusinessUser.h"
+BusinessUser::BusinessUser(string name, int businessnumber, string id, string pw)
+{
+	this->companyName  = name;
+	this->businessNumber = businessnumber;
+	this->id = id;
+	this->pw = pw;
+}
 /*
 	함수 이름 : EmploymentInformationCollection::addEmploymentInformation()
 	기능	  : managedEmploymentInformationCollection에 새로운 채용정보를 추가

@@ -4,14 +4,15 @@
 #include "BusinessUser.h"
 
 #define MAX_NUMBER_OF_BUSINESSUSER 50
-class BusinessUserCollection {
+class BusinessUserCollection 
+{
 private:
-    BusinessUserCollection* managedBusinessUser[MAX_NUMBER_OF_BUSINESSUSER];
+    BusinessUser* managedBusinessUser[MAX_NUMBER_OF_BUSINESSUSER];
     int numBusinessUser;
     int now;
 public:
     BusinessUser* findFirst();
-    BusinessUser* getNext(int now);
+    BusinessUser* getNext();
     int getSize();
     void addNewBusinessUser(string name,int businessnumber, string id, string pw);
     BusinessUserCollection()

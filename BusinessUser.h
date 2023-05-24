@@ -13,4 +13,5 @@ class BusinessUser:User{
     public:
         void addNewEmploymentInformation(string work,int peopleNumber,string deadline);
         EmploymentInformationCollection listEmploymentInformation();
+        BusinessUser(string name, int businessnumber, string id, string pw);
 };
