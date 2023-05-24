@@ -10,5 +10,3 @@ class LogoutUI
     public:
         void showLogoutProcess(Logout *logout); 
 };
-
-#endif

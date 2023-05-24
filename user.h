@@ -21,4 +21,4 @@ class User{
         void changeLoginState(); //
         void revokePermission(); //
 
-}
+};

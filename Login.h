@@ -18,4 +18,3 @@ class Login{
         void performLoginProcess(string id, string pw);
         void run(UserList *userList);
 };
-#endif

@@ -21,4 +21,4 @@ class User{
         void RevokePermission(string id);
         void UserLogout();   
         void UserLogin();
-}
+};
