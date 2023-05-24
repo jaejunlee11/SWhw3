@@ -5,6 +5,7 @@
 #include "NormalUser.h"
 #include "EmploymentRegister.h"
 #include "EmploymentStatistic.h"
+#include "ApplymentStatistics.h"
 #include "user.h"
 using namespace std;
 // 상수 선언
@@ -18,8 +19,8 @@ void program_exit();
 
 // 변수 선언
 FILE* in_fp, *out_fp;
-BusinessUser* currentUser; //현재 로그인 중인 User
-NormalUser* currntUser;
+BusinessUser* currentUserB; //현재 로그인 중인 User
+NormalUser* currentUserN;
 BusinessUser* businessList[MAX_NUMBER_OF_USERS];
 NormalUser* normalList[MAX_NUMBER_OF_USERS];
 
@@ -70,7 +71,7 @@ void doTask()
                     case 1:// "3.1. 채용 정보 등록“ 메뉴 부분
                     {
                         EmploymentRegister employmentRegistercontrol;
-                        employmentRegistercontrol.run(currentUser);
+                        employmentRegistercontrol.run(currentUserB);
                         break;
                     }
                 }
@@ -81,9 +82,10 @@ void doTask()
                 {
                     case 1:// "5.1. 지원 정보 통계“ 메뉴 부분
                     {
-
-                        EmploymentStatistic employmentStatisticControl;
-                        employmentStatisticControl.run(currentUser);
+                        EmploymentStatistic employmentStatisticsControl;
+                        employmentStatisticsControl.run(currentUserB);
+                        // ApplymentStatistics applymentStatisticsControl;
+                        // applymentStatisticsControl.run(currentUserN);
                         break;
                     }
                 }
