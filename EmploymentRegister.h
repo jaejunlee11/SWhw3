@@ -1,3 +1,5 @@
+//중복방지
+#pragma once
 // 헤더 선언
 #include <iostream>
 #include <string>
@@ -10,7 +12,7 @@ class EmploymentRegister{
     private:
         EmploymentRegisterUI employmentRegisterUI;
         BusinessUser *businessUser;
-        EmploymentInformation employmentInformation;
+        EmploymentInformation *employmentInformation;
     public:
         void addEmploymentInformation(string work,int peopleNumber,string deadline);
         void run(BusinessUser *businessUser);
