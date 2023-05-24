@@ -1,5 +1,3 @@
-//중복방지
-#pragma once
 // 헤더 선언
 #include <stdio.h>
 #include <string.h>
@@ -17,8 +15,10 @@ class User{
 
         ~User();
 
-        bool checkIDInfo(string pw); //
-        void changeLoginState(); //
-        void revokePermission(); //
-
+        bool CheckIDPWInfo(string givenid,string givenpw);
+        bool CheckIDInfo(string givenid);
+        bool CheckLogin();
+        void RevokePermission(string id);
+        void UserLogout();   
+        void UserLogin();
 }

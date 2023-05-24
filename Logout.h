@@ -1,14 +1,19 @@
 //중복방지
 #pragma once
 // 헤더 선언
-#include <stdio.h>
+#include <iostream>
 #include <string>
+#include "LogoutUI.h"
+#include "Logout.h"
+#include "UserList.h"
 using namespace std;
-
-#include "user.h"
-
-std::string id;
-User* userlist;
-void Logout(string id,User* userlist);
-
-#endif
+//  control 클래스 정의
+class Logout{
+    private:
+        LogoutUI logoutUI;
+        User *user;
+        UserList *userList;        
+    public:
+        void performLogoutProcess(string id);
+        void run(UserList *userList);
+};

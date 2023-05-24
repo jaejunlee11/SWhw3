@@ -1,15 +1,11 @@
 //중복방지
 #pragma once
-// 헤더 선언
-#include <stdio.h>
-#include <string>
-using namespace std;
-
-#include "user.h"
-
-std::string id;
-std::string pw;
-User* userlist;
-void RequestLogin(string id, string pw,User* userlist);
-
-#endif
+#include <iostream>
+//  boundary클래스 정의
+class LoginUI
+{
+    private:
+        Login *login;
+    public:
+        void showLoginProcess(Login *login); 
+};
