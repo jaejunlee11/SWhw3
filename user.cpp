@@ -8,6 +8,13 @@
 using namespace std;
 #include "User.h"
 
+/*
+	함수 이름 : User::User()
+	기능	  : 클래스 생성자,초기값 설정
+	전달 인자 : 없음
+	반환값    : 없음
+*/
+
 User::User() 
 {
     nowlogin = 0;
