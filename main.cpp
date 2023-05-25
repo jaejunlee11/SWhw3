@@ -6,7 +6,9 @@
 #include "EmploymentRegister.h"
 #include "EmploymentStatistic.h"
 #include "ApplymentStatistics.h"
+#include "UserRegister.h"
 #include "user.h"
+#include "Logout.h"
 using namespace std;
 // 상수 선언
 #define INPUT_FILE_NAME "input.txt"
@@ -14,7 +16,6 @@ using namespace std;
 #define MAX_NUMBER_OF_USERS 50
 // 함수 선언
 void doTask();
-void RequestRegister();
 void program_exit();
 
 // 변수 선언
@@ -27,7 +28,6 @@ NormalUser* normalList[MAX_NUMBER_OF_USERS];
 // User* currentUser; //현재 로그인 중인 User
 // User*  userList= new User[MAX_NUMBER_OF_USERS];
 
-int   membernum;
 int main()
 {
     // 파일 입출력을 위한 초기화
@@ -53,14 +53,21 @@ void doTask()
                  switch(menu_level_2)
                 {
                     case 1:// "1.1. 회원가입“ 메뉴 부분
-                    {
-                        // Register() 함수에서 해당 기능 수행
-                        RequestRegister();
+                    {   
+                        //user 선택을 위한 변수
+                        int choice=0;
+                        fscanf(in_fp, "%d", choice);
+                        if (choice==1){
+                            UserRegister userRegister;
+                            userRegister.businessRun(currentUserB);
+                        }else if (choice==2){
+                            UserRegister UserRegister;
+                            UserRegister.normalRun(currentUserN);
+                        }
                         break;
                     }
                     case 2:
                     {
-                        break;
                     }
                 }
             }
