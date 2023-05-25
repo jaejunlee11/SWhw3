@@ -12,6 +12,8 @@
 #include "Dropout.h"
 #include "Login.h"
 #include "ApplymentCancel.h"
+#include "BusinessUserCollection.h"
+#include "NormalUserCollection.h"
 #include "InquiryEmploymentList.h"
 using namespace std;
 // 상수 선언
@@ -26,11 +28,9 @@ void program_exit();
 FILE* in_fp, *out_fp;
 BusinessUser* currentUserB; //현재 로그인 중인 User
 NormalUser* currentUserN;
-BusinessUser* businessList[MAX_NUMBER_OF_USERS];
-NormalUser* normalList[MAX_NUMBER_OF_USERS];
+BusinessUserCollection businessList[MAX_NUMBER_OF_USERS];
+NormalUserCollection normalList[MAX_NUMBER_OF_USERS];
 
-// User* currentUser; //현재 로그인 중인 User
-// User*  userList= new User[MAX_NUMBER_OF_USERS];
 
 int main()
 {
@@ -63,10 +63,10 @@ void doTask()
                         fscanf(in_fp, "%d", &choice);
                         if (choice==1){
                             UserRegister userRegister;
-                            userRegister.businessRun(currentUserB);
+                            userRegister.businessRun(businessList);
                         }else if (choice==2){
                             UserRegister UserRegister;
-                            UserRegister.normalRun(currentUserN);
+                            UserRegister.normalRun(normalList);
                         }
                         break;
                     }
