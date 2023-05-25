@@ -19,10 +19,12 @@ User::User()
     permission = 1;
 }
 
-User::~User() 
-{
-
-}
+/*
+	함수 이름 : User::checkIDInfo()
+	기능	  : User 내부의 id,pw값과 전달 인자 id, pw값이 동일한지 확인함
+	전달 인자 : string id, string pw
+	반환값    : boolean true/false
+*/
 
 bool User::checkIDInfo(string id, string pw) 
 {
@@ -36,6 +38,12 @@ bool User::checkIDInfo(string id, string pw)
     }
 }
 
+/*
+	함수 이름 : User::changeLoginState()
+	기능	  : User 내부의 nowlogin 값을 login/logout 시마다 변경해줌
+	전달 인자 : 없음
+	반환값    : 없음
+*/
 
 void User::changeLoginState() 
 {
@@ -49,10 +57,24 @@ void User::changeLoginState()
     }
 }
 
+/*
+	함수 이름 : User::revokePermission()
+	기능	  : User의 내부 permission 값 변경.
+	전달 인자 : 없음
+	반환값    : 없음
+*/
+
 void User::revokePermission() 
 {
     permission = 0;
 }
+
+/*
+	함수 이름 : User::showid()
+	기능	  : User의 id값 return
+	전달 인자 : 없음
+	반환값    : string id
+*/
 
 string User::showid() 
 {

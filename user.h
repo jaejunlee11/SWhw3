@@ -5,7 +5,7 @@
 #include <string.h>
 #include <iostream>
 using namespace std;
-
+//회원 클래스의 정의 (superclass)
 class User{
     private:
         int nowlogin;
@@ -15,8 +15,6 @@ class User{
         string pw;    
     public:
         User();
-
-        ~User();
 
         bool checkIDInfo(string id, string pw); //
         void changeLoginState(); //

@@ -9,5 +9,5 @@ class LoginUI
     private:
         Login *login;
     public:
-        User* showLoginProcess(Login *login); 
+        void showLoginProcess(Login *login); 
 };

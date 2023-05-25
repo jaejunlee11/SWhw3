@@ -6,9 +6,9 @@ using namespace std;
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
 /*
-	함수 이름 : LogoutUI::showLogoutProcess()
-	기능	  : 
-	전달 인자 : 
+	함수 이름 : LogoutUI::normalUserLogout()
+	기능	  : 일반 회원의 로그아웃 수행하는 boundary class
+	전달 인자 : control class LogoutControl
 	반환값    : 없음
 */
 void LogoutUI::normalUserLogout(Logout *LogoutControl)
@@ -25,6 +25,12 @@ void LogoutUI::normalUserLogout(Logout *LogoutControl)
 	fprintf(out_fp, "%s %d %s\n", id);
 };
 
+/*
+	함수 이름 : LogoutUI::businessUserLogout()
+	기능	  : 회사 회원의 로그아웃 수행하는 boundary class
+	전달 인자 : control class LogoutControl
+	반환값    : 없음
+*/
 void LogoutUI::businessUserLogout(Logout *LogoutControl)
 {
 	logout=LogoutControl;

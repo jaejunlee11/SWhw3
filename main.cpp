@@ -9,6 +9,8 @@
 #include "UserRegister.h"
 #include "user.h"
 #include "Logout.h"
+#include "Dropout.h"
+#include "Login.h"
 #include "ApplymentCancel.h"
 using namespace std;
 // 상수 선언
@@ -67,10 +69,42 @@ void doTask()
                         }
                         break;
                     }
-                    case 2:
+                    case 2: // 1.2. 회원 탈퇴 메뉴 부분
                     {
+                        if(currentUserB != NULL)
+                        {
+                            Dropout dropout;
+                            dropout.businessRun(currentUserB);
+                        }
+                        else
+                        {
+                            Dropout Dropout;
+                            Dropout.normalRun(currentUserN);
+                        }
+                        break;
                     }
                 }
+            case 2:
+                 switch(menu_level_2)
+                {
+                    case 1:// "2.1. 로그인“ 메뉴 부분
+                    {   
+                        Login login;
+                        login.run(currentUserB,currentUserN);
+                    }
+                    case 2: // 2.2 로그아웃 메뉴 부분
+                    {
+                        if(currentUserB != NULL)
+                        {
+                            Logout logout;
+                            logout.businessRun(currentUserB);
+                        }
+                        else
+                        {
+                            Logout Logout;
+                            Logout.normalRun(currentUserN);
+                        }
+                    }                
             }
             case 3:
             {

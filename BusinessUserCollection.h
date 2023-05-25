@@ -4,6 +4,8 @@
 #include "BusinessUser.h"
 
 #define MAX_NUMBER_OF_BUSINESSUSER 50
+
+//BusinessUser의 List 화 위한 BusinessUserCollection의 정의
 class BusinessUserCollection 
 {
 private:

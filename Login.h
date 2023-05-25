@@ -17,6 +17,6 @@ class Login{
         BusinessUserCollection* businessusercollection;
 
     public:
-        User* performLoginProcess(string id, string pw);
+        void performLoginProcess(string id, string pw);
         void run(BusinessUser* businessuserB,NormalUser* normaluserN);
 };

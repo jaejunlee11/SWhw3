@@ -19,8 +19,8 @@ void UserRegisterUI::newUserRegister(UserRegister *userRegisterControl,int choic
     FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
     FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
     string name, id, pw;
-    int choice, unino;
-    fscanf(in_fp, "%s %d %s %s", choice, &name, unino, &id, &pw);
+    int unino;
+    fscanf(in_fp, "%d %s %s",&name, unino, &id, &pw);
     if(choice == 1)
     {
         userRegister->addBusinessUser(name,unino,id,pw);

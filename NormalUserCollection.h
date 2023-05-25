@@ -4,6 +4,8 @@
 #include "NormalUser.h"
 
 #define MAX_NUMBER_OF_NORMALUSER 50
+
+//NormalUser의 List 화 위한 NormalUserCollection의 정의
 class NormalUserCollection 
 {
 private:
