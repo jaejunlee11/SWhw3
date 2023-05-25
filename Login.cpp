@@ -1,40 +1,39 @@
 // 헤더 선언
 #include "Login.h"
+#include <typeinfo>
 /*
 	함수 이름 : Login::performLoginProcess()
-	기능	  : 
-	전달 인자 : 
+	기능	  : 각 Collection 탐색을 통해 Normaluser인지 businessuser인지 파악 후 Login 과정을 수행함
+	전달 인자 : string id, string pw
 	반환값    : 없음
 */
-User* Login::performLoginProcess(string id, string pw)
+void Login::performLoginProcess(string id, string pw)
 {
-    User* target;
-    target = businessusercollection->findBusinessUser(id,pw);
-    if (target != NULL)
+    BusinessUser* targetB;
+    NormalUser*   targetN;
+    targetB = businessusercollection->findBusinessUser(id,pw);
+    if (targetB != NULL)
     {
-        target->changeLoginState();
-        return target;
+        targetB->changeLoginState();
+        businessuser = targetB;
     }
-    target = normalusercollection->findNormalUser(id,pw);
-    if(target != NULL)
+    targetN = normalusercollection->findNormalUser(id,pw);
+    if(targetN != NULL)
     {
-        target->changeLoginState();
-        return target;
+        targetN->changeLoginState();
+        normaluser = targetN;
     }
-    return NULL;
 };
 /*
 	함수 이름 : Login::run()
-	기능	  : 
-	전달 인자 : 
+	기능	  :  로그인 과정 수행
+	전달 인자 : BusiunessUser, NormalUser (currentuser 변경용)
 	반환값    : 없음
 */
 void Login::run(BusinessUser* businessuserB,NormalUser* normaluserN)
 {
-    User *ans;
     this->businessuser=businessuserB;
     this->normaluser=normaluserN;
     loginUI=LoginUI();
-    ans = loginUI.showLoginProcess(this);
-    //다중 return?
+    loginUI.showLoginProcess(this);
 }

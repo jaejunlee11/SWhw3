@@ -6,7 +6,7 @@
 #include "ApplymentInformationCollection.h"
 
 using namespace std;
-
+//일반회원 class 의 정의(User의 subclass)
 class NormalUser: public User {
 	private:
 		string name;

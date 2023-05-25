@@ -7,12 +7,12 @@ using namespace std;
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
 /*
-	함수 이름 : LoginUI::performLoginProcess()
+	함수 이름 : LoginUI::showLoginProcess()
 	기능	  : 로그인 과정 수행
-	전달 인자 : 
+	전달 인자 : control class loginControl
 	반환값    : 없음
 */
-User* LoginUI::showLoginProcess(Login *loginControl)
+void LoginUI::showLoginProcess(Login *loginControl)
 {
 	login=loginControl;
 	User* returnuser;
@@ -22,9 +22,8 @@ User* LoginUI::showLoginProcess(Login *loginControl)
 	string id,pw;
 
 	fscanf(in_fp, "%s %s", id, pw);
-    returnuser = login->performLoginProcess(id,pw);
+    login->performLoginProcess(id,pw);
 	// 출력
 	fprintf(out_fp, "2.1 로그인\n");
 	fprintf(out_fp, "%s %s\n", id,pw);
-	return returnuser;
 };

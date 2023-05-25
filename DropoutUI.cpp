@@ -9,9 +9,9 @@ using namespace std;
 #define OUTPUT_FILE_NAME "output.txt"
 
 /*
-	함수 이름 : DropoutUI::userDropout()
-	기능	  : 탈퇴처리
-	전달 인자 : id
+	함수 이름 : DropoutUI::normalUserDropout()
+	기능	  : 일반회원의 탈퇴처리
+	전달 인자 :  control class dropoutcontrol
 	반환값    : 없음
 */
 
@@ -30,6 +30,15 @@ void DropoutUI::normalUserDropout(Dropout *dropoutControl)
 	fprintf(out_fp, "1.2. 회원탈퇴\n");
 	fprintf(out_fp, "%s\n", id);
 };
+
+/*
+	함수 이름 : DropoutUI::businessUserDropout()
+	기능	  : 회사회원의 탈퇴처리
+	전달 인자 :  control class dropoutcontrol
+	반환값    : 없음
+*/
+
+
 
 void DropoutUI::businessUserDropout(Dropout *dropoutControl) 
 {
