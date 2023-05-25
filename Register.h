@@ -4,8 +4,10 @@
 #include <iostream>
 #include <string>
 #include "RegisterUI.h"
-#include "UserList.h"
-
+#include "NormalUserCollection.h"
+#include "BusinessUserCollection.h"
+#include "BusinessUser.h"
+#include "NormalUser.h"
 //control 클래스 정의
 class UserRegister{
     private:

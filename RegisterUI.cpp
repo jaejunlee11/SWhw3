@@ -1,6 +1,6 @@
 // 헤더 선언
 
-#include <cstdio>
+#include <stdio.h>
 #include "RegisterUI.h"
 #include "Register.h"
 #include <string>
