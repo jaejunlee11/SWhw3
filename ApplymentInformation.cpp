@@ -8,7 +8,7 @@
 */
 format ApplymentInformation::getApplymentInformation() {
 	x.name = this->name;
-	x.businessNum = this->businessNumber;
+	x.businessNum = this->businessNum;
 	x.work = this->work;
 	x.pNum = this->peopleNumber;
 	x.isCancel = this->isCancel;
@@ -27,7 +27,7 @@ void ApplymentInformation::cancelApplymentInformation() {
 /*
 	함수 이름 : ApplymentInformation::ApplymentInformation()
 	기능	  : 생성자
-	전달 인자 : work->업무, peopleNumber->인원수, deadline->신청마감일, name->회사이름, isCancel->취소여부, businessNumber->사업자 번호
+	전달 인자 : work->업무, peopleNumber->인원수, deadline->신청마감일, name->회사이름, isCancel->취소여부, businessNum->사업자 번호
 */
 ApplymentInformation:: ApplymentInformation(string work, int peopleNumber, string deadline, string name,bool isCancel, int businessNumber){
 	this->work=work;
@@ -35,5 +35,5 @@ ApplymentInformation:: ApplymentInformation(string work, int peopleNumber, strin
 	this->deadline=deadline;
 	this->name=name;
 	this->isCancel=isCancel;
-	this->businessNumber=businessNumber;
+	this->businessNum=businessNumber;
 };

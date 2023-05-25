@@ -21,12 +21,12 @@ private:
     int peopleNumber;
     string deadline;
     bool isCancel;
-    int businessNumber;
+    int businessNum;
     
     format x;
 
 public:
-    ApplymentInformation(string work, int peopleNumber, string deadline, string name, bool isCancel, int businessNumber);
+    ApplymentInformation(string work, int peopleNumber, string deadline, string name, bool isCancel, int businessNum);
     format getApplymentInformation();
     void cancelApplymentInformation();
 };
