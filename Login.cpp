@@ -30,10 +30,12 @@ void Login::performLoginProcess(string id, string pw)
 	전달 인자 : BusiunessUser, NormalUser (currentuser 변경용)
 	반환값    : 없음
 */
-void Login::run(BusinessUser* businessuserB,NormalUser* normaluserN)
+void Login::run(BusinessUser* businessuserB,NormalUser* normaluserN,BusinessUserCollection businessUserCollection,NormalUserCollection NormalUserCollection)
 {
     this->businessuser=businessuserB;
     this->normaluser=normaluserN;
+    this->businessusercollection=businessusercollection;
+    this->normalusercollection=normalusercollection;
     loginUI=LoginUI();
     loginUI.showLoginProcess(this);
 }
