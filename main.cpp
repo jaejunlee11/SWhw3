@@ -93,7 +93,7 @@ void doTask()
                     case 1:// "2.1. 로그인“ 메뉴 부분
                     {   
                         Login login;
-                        login.run(currentUserB,currentUserN);
+                        login.run(currentUserB,currentUserN,businessList,normalList);
                     }
                     case 2: // 2.2 로그아웃 메뉴 부분
                     {
