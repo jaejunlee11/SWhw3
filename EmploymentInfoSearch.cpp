@@ -50,6 +50,7 @@ Employee* EmploymentInfoSearch::findEmploymentInformation(string companyName) {
 			}
 		}
 	}
+	arr=findArr;
 	return findArr;
 }
 /*
@@ -69,6 +70,7 @@ int EmploymentInfoSearch::findCountSize(){
 */
 void EmploymentInfoSearch::run(BusinessUserCollection* businessUserCollection) {
 	this->businessUserCollection = businessUserCollection;
+	this->arr=arr;
 	employmentInfoSearchUI = EmploymentInfoSearchUI();
 	employmentInfoSearchUI.inputEmploymentInformation(this);
 }
