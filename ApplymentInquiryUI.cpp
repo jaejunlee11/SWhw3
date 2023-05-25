@@ -18,7 +18,7 @@ void ApplymentInquiryUI::showApplymentList(format infoArr[], int count) {
 	string businessName, work;
 	int businessNum;
 
-	fprintf(out_fp, "4.3. ���� ���� ��ȸ\n");
+	fprintf(out_fp, "4.3.지원 정보 조회\n");
 	for (int i = 1; i < count; i++) {
 		if (infoArr[i].isCancel == false) {
 			fprintf(out_fp, "%s %d %s %d %s\n", infoArr[i].name, infoArr[i].businessNum, infoArr[i].work, infoArr[i].pNum, infoArr[i].deadline);

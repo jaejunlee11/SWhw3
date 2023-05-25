@@ -16,4 +16,5 @@ private:
     ApplymentInformationCollection applyInfoCollection;
 public:
     void run(NormalUser *normaluser);
+    ApplymentInquiry();
 };
