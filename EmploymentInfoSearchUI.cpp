@@ -1,9 +1,8 @@
 #include "EmploymentInfoSearchUI.h"
 #include <string>
-using namespace std;
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
-
+using namespace std;
 
 void EmploymentInfoSearchUI::inputEmploymentInformation(EmploymentInfoSearch* control)
 {
@@ -11,7 +10,7 @@ void EmploymentInfoSearchUI::inputEmploymentInformation(EmploymentInfoSearch* co
 	FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
 
 	fscanf(in_fp, "%s", companyName);
-	control.findEmploymentInformation(companyName);
-	fprintf(out_fp, "4.1. Ã¤¿ë Á¤º¸ °Ë»ö\n");
+	control->findEmploymentInformation(companyName);
+	fprintf(out_fp, "4.1. ì±„ìš© ì •ë³´ ê²€ìƒ‰\n");
 	fprintf(out_fp, "%s %d %s %d %s", infoArr[i].companyName, infoArr[i].businessNumber, infoArr[i].work, infoArr[i].peopleNumber, infoArr[i].deadline);
 };
