@@ -12,6 +12,7 @@
 #include "Dropout.h"
 #include "Login.h"
 #include "ApplymentCancel.h"
+#include "InquiryEmploymentList.h"
 using namespace std;
 // 상수 선언
 #define INPUT_FILE_NAME "input.txt"
@@ -104,6 +105,7 @@ void doTask()
                             Logout Logout;
                             Logout.normalRun(currentUserN);
                         }
+                        break;
                     }                
             }
             case 3:
@@ -114,6 +116,12 @@ void doTask()
                     {
                         EmploymentRegister employmentRegistercontrol;
                         employmentRegistercontrol.run(currentUserB);
+                        break;
+                    }
+                    case 2:// "3.2. 등록된 채용 정보 조회“ 메뉴 부분
+                    {
+                        InquiryEmploymentList inquiryEmploymentList;
+                        inquiryEmploymentList.run(currentUserB);
                         break;
                     }
                 }
@@ -156,7 +164,6 @@ void doTask()
                         ApplymentStatistics applymentStatisticsControl;
                         applymentStatisticsControl.run(currentUserN);
                         }
-
                         break;
                     }
                 }
@@ -176,6 +183,7 @@ void doTask()
         }
     }
     return;
+    }
 }
 void program_exit()
 {
