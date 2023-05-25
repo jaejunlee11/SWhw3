@@ -3,6 +3,8 @@
 //헤더 선언
 #include <iostream>
 #include "Login.h"
+//전방 선언
+class Login;
 //  boundary클래스 정의
 class LoginUI
 {

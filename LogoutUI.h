@@ -3,6 +3,8 @@
 // 헤더 선언
 #include <iostream>
 #include "Logout.h"
+//전방 선언
+class Logout;
 // boundary클래스 정의
 class LogoutUI
 {
