@@ -10,7 +10,7 @@ using namespace std;
 */
 void UserRegister::addBusinessUser(string name, int businessnumber, string id, string pw)
 {
-  businessUserCollection.addNewBusinessUser(name, businessnumber, id, pw);
+  businessUserCollection->addNewBusinessUser(name, businessnumber, id, pw);
 };
 
 /*
@@ -21,7 +21,7 @@ void UserRegister::addBusinessUser(string name, int businessnumber, string id, s
 */
 void UserRegister::addNormalUser(string name, int SSN, string id, string pw)
 {
-  normalUserCollection.addNewNormalUser(name, SSN, id, pw);
+  normalUserCollection->addNewNormalUser(name, SSN, id, pw);
 };
 
 
@@ -34,9 +34,9 @@ void UserRegister::addNormalUser(string name, int SSN, string id, string pw)
 	전달 인자 : businessuserB
 	반환값    : 없음
 */
-void UserRegister::businessRun(BusinessUser* businessuserB)
+void UserRegister::businessRun(BusinessUserCollection* businessUserCollection)
 {
-  this->businessuserB=businessuserB;
+  this->businessUserCollection=businessUserCollection;
   userRegisterUI=UserRegisterUI();
   userRegisterUI.newUserRegister(this,1);
 };
@@ -48,9 +48,9 @@ void UserRegister::businessRun(BusinessUser* businessuserB)
 	반환값    : 없음
 */
 
-void UserRegister::normalRun(NormalUser* normaluserN)
+void UserRegister::normalRun(NormalUserCollection* normalUserCollection)
 {
-  this->normaluserN=normaluserN;
+  this->normalUserCollection=normalUserCollection;
   userRegisterUI=UserRegisterUI();
   userRegisterUI.newUserRegister(this,2);
 };
