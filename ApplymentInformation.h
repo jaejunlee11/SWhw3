@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+//구조체 정의
 struct format {
     string name;
     int businessNum;
@@ -12,6 +13,7 @@ struct format {
     bool isCancel;
     string deadline;
 };
+// 지원정보를 위해 ApplymentInformation 클래스 정의
 class ApplymentInformation {
 private:
     string name;

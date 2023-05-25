@@ -6,7 +6,7 @@
 #include "ApplymentInquiryUI.h"
 #include "NormalUser.h"
 using namespace std;
-
+// 지원정보를 조회를 위한 ApplymentInquiry control 클래스 정의
 class ApplymentInquiry {
 private:
     NormalUser* normalUser;
