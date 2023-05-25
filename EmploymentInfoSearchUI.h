@@ -8,7 +8,7 @@ class EmploymentInfoSearchUI
 {
 private:
 	EmploymentInfoSearch* employmentSearch;
-	string companyName = Null;
+	string companyName = NULL;
 public:
 	void inputEmploymentInformation(EmploymentInfoSearch* control);
 };
