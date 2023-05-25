@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
+//전방 선언
+class EmploymentStatistic;
 // 채용정보 통계를 위한 EmploymentStatisticUI boundary클래스 정의
 class EmploymentStatisticUI{
     public:

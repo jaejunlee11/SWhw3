@@ -15,6 +15,7 @@ private:
 	EmploymentInformation* employInfo;
 	EmploymentInfoSearchUI employmentInfoSearchUI;
 	EmploymentInformationCollection employInfoCollection;
+	Employee* arr;
 	int findCount;
 public:
 	Employee* findEmploymentInformation(string companyName);

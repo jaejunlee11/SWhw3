@@ -6,7 +6,8 @@
 #include <iostream>
 #include "UserRegister.h"
 using namespace std;
-
+//전방선언
+class UserRegister;
 //입출력을 위한 REGISTERUI boundary class 정의
 class UserRegisterUI
 {

@@ -17,6 +17,6 @@ void ApplymentCancelUI::putBusinessNum(ApplymentCancel *control) {
 
 	fscanf(in_fp, "%d", &cancelNum);
 	format info=control->cancelApplyment(cancelNum);
-	fprintf(out_fp, "4.4. ���� ���\n");
+	fprintf(out_fp, "4.4. 지원 취소\n");
 	fprintf(out_fp, "%s %d %s\n", info.name, info.businessNum, info.work);
 };

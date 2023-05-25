@@ -5,12 +5,14 @@
 #include <string>
 #include "EmploymentInfoSearch.h"
 using namespace std;
+//전방 선언
+class EmploymentInfoSearch;
 // 채용정보 검색을 위한 EmploymentInfoSearch UI 클래스 정의
 class EmploymentInfoSearchUI
 {
 private:
 	EmploymentInfoSearch* employmentSearch;
-	string companyName = NULL;
+	string companyName;
 public:
 	void inputEmploymentInformation(EmploymentInfoSearch* control);
 };
