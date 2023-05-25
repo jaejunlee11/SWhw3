@@ -8,7 +8,7 @@ class ApplymentCancel;
 class ApplymentCancelUI {
 	private:
 		ApplymentCancel* applymentCancel;
-		int cancelNum = NULL;
+		int cancelNum;
 	public:
 		void putBusinessNum(ApplymentCancel *control);
 };

@@ -3,14 +3,14 @@
 using namespace std;
 
 /*
-	ÇÔ¼ö ÀÌ¸§  : ApplymentCancel::cancelApplyment()
-	±â´É	  : Ãë¼ÒÇÒ »ç¾÷ÀÚ ¹øÈ£¸¦ ÀÔ·Â¹Þ¾Æ Áö¿ø Á¤º¸ Ãë¼Ò ½ÇÇà
-	Àü´Þ ÀÎÀÚ : cancelNum -> Ãë¼ÒÇÒ Áö¿øÀÇ »ç¾÷ÀÚ¹øÈ£
-	¹ÝÈ¯°ª    : Ãë¼ÒÇÑ Áö¿øÁ¤º¸ format
+	ï¿½Ô¼ï¿½ ï¿½Ì¸ï¿½  : ApplymentCancel::cancelApplyment()
+	ï¿½ï¿½ï¿½	  : ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ô·Â¹Þ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : cancelNum -> ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½È£
+	ï¿½ï¿½È¯ï¿½ï¿½    : ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ format
 */
 format ApplymentCancel::cancelApplyment(int cancelNum) {
 	format infoArr[50];
-	ApplymentInformation* applyInfo = applyInfoCollection.findFirst();
+	applyInfo = applyInfoCollection.findFirst();
 	infoArr[0] = applyInfo->getApplymentInformation();
 	int count = applyInfoCollection.getSize();
 
@@ -30,10 +30,10 @@ format ApplymentCancel::cancelApplyment(int cancelNum) {
 }
 
 /*
-	ÇÔ¼ö ÀÌ¸§  : ApplymentCancel::run()
-	±â´É	  : control class »ý¼º ÈÄ Áö¿ø Ãë¼Ò ±â´É ½ÇÇà
-	Àü´Þ ÀÎÀÚ : normaluser -> ÇöÀç ·Î±×ÀÎÇÑ normalUser
-	¹ÝÈ¯°ª    : ¾øÀ½
+	ï¿½Ô¼ï¿½ ï¿½Ì¸ï¿½  : ApplymentCancel::run()
+	ï¿½ï¿½ï¿½	  : control class ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : normaluser -> ï¿½ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½ normalUser
+	ï¿½ï¿½È¯ï¿½ï¿½    : ï¿½ï¿½ï¿½ï¿½
 */
 void ApplymentCancel::run(NormalUser *normaluser) {
 	this->normalUser = normaluser;

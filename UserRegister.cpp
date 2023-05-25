@@ -1,10 +1,6 @@
 // 헤더 선언
-#include <stdio.h>
-#include <string>
-using namespace std;
-
 #include "UserRegister.h"
-
+using namespace std;
 
 /*
 	함수 이름 : UserRegister::addNewBusinessUser()

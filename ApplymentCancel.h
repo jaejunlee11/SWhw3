@@ -12,7 +12,7 @@ using namespace std;
 class ApplymentCancel {
     private:
         NormalUser* normalUser;
-        ApplymentInformation applymentInformation;
+        ApplymentInformation* applyInfo;
         ApplymentCancelUI applymentCancelUI;
         ApplymentInformationCollection applyInfoCollection;
     public: 

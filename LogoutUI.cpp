@@ -1,6 +1,5 @@
 // 헤더 선언
 #include "LogoutUI.h"
-#include "Logout.h"
 #include <string>
 using namespace std;
 // 상수 선언

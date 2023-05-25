@@ -4,6 +4,7 @@
 // 헤더 선언
 #include <string>
 #include <iostream>
+#include "UserRegister.h"
 using namespace std;
 
 //입출력을 위한 REGISTERUI boundary class 정의

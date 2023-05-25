@@ -9,6 +9,7 @@
 #include "UserRegister.h"
 #include "user.h"
 #include "Logout.h"
+#include "ApplymentCancel.h"
 using namespace std;
 // 상수 선언
 #define INPUT_FILE_NAME "input.txt"
@@ -56,7 +57,7 @@ void doTask()
                     {   
                         //user 선택을 위한 변수
                         int choice=0;
-                        fscanf(in_fp, "%d", choice);
+                        fscanf(in_fp, "%d", &choice);
                         if (choice==1){
                             UserRegister userRegister;
                             userRegister.businessRun(currentUserB);
@@ -83,21 +84,50 @@ void doTask()
                     }
                 }
             }
+            case 4:
+            {
+                switch(menu_level_2)
+                {
+                    case 1:// "4.1. 채용 정보 검색" 메뉴 부분
+                    {
+                        break;
+                    }
+                    case 2:// "4.2. 채용 지원“ 메뉴 부분
+                    {
+                        break;
+                    }
+                    case 3:// "4.3. 지원 정보 조회“ 메뉴 부분
+                    {
+                        
+                        break;
+                    }
+                    case 4:// "4.4. 지원 취소“ 메뉴 부분
+                    {   
+                        ApplymentCancel applymentCancel;
+                        applymentCancel.run(currentUserN);
+                        break;
+                    }                                                            
+                }
+            }
             case 5:
             {
                 switch(menu_level_2)
                 {
                     case 1:// "5.1. 지원 정보 통계“ 메뉴 부분
                     {
-                        EmploymentStatistic employmentStatisticsControl;
-                        employmentStatisticsControl.run(currentUserB);
-                        // ApplymentStatistics applymentStatisticsControl;
-                        // applymentStatisticsControl.run(currentUserN);
+                        if(currentUserN==NULL){
+                            EmploymentStatistic employmentStatisticsControl;
+                            employmentStatisticsControl.run(currentUserB);
+                        }else{
+                        ApplymentStatistics applymentStatisticsControl;
+                        applymentStatisticsControl.run(currentUserN);
+                        }
+
                         break;
                     }
                 }
             }
-            case 7:
+            case 6:
             {
                 switch(menu_level_2)
                 {

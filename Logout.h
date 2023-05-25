@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 #include "LogoutUI.h"
-#include "Logout.h"
 #include "BusinessUser.h"
 #include "NormalUser.h"
 using namespace std;

@@ -1,8 +1,5 @@
 // 헤더 선언
-
-#include <stdio.h>
 #include "UserRegisterUI.h"
-#include "UserRegister.h"
 #include <string>
 using namespace std;
 //상수 선언
