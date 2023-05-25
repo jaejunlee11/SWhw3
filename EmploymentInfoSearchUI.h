@@ -5,7 +5,7 @@
 #include <string>
 #include "EmploymentInfoSearch.h"
 using namespace std;
-
+// 채용정보 검색을 위한 EmploymentInfoSearch UI 클래스 정의
 class EmploymentInfoSearchUI
 {
 private:

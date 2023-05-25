@@ -1,13 +1,12 @@
 #include <iostream>
 #include <algorithm>
 #include "ApplymentInquiry.h"
-#include "NormalUser.h"
 
 /*
-	ÇÔ¼ö ÀÌ¸§  : cmp()
-	±â´É	  : Áö¿øÁ¤º¸ Á¶È¸ ½Ã È¸»çÀÌ¸§¿¡ ´ëÇÑ ¿À¸§Â÷¼ø Á¤·Ä ±â´É
-	Àü´Þ ÀÎÀÚ : a->Áö¿øÁ¤º¸1, b->Áö¿øÁ¤º¸2
-	¹ÝÈ¯°ª    : int
+	ï¿½Ô¼ï¿½ ï¿½Ì¸ï¿½  : cmp()
+	ï¿½ï¿½ï¿½	  : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ È¸ï¿½ï¿½ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+	ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : a->ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1, b->ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2
+	ï¿½ï¿½È¯ï¿½ï¿½    : int
 */
 int cmp(format a, format b)
 {
@@ -15,10 +14,10 @@ int cmp(format a, format b)
 }
 
 /*
-	ÇÔ¼ö ÀÌ¸§  : ApplymentInquiry::run()
-	±â´É	  : control class »ý¼º ÈÄ Áö¿øÁ¤º¸ Á¶È¸ ±â´É ½ÇÇà
-	Àü´Þ ÀÎÀÚ : normaluser -> ÇöÀç ·Î±×ÀÎÇÑ normalUser
-	¹ÝÈ¯°ª    : ¾øÀ½
+	ï¿½Ô¼ï¿½ ï¿½Ì¸ï¿½  : ApplymentInquiry::run()
+	ï¿½ï¿½ï¿½	  : control class ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+	ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : normaluser -> ï¿½ï¿½ï¿½ï¿½ ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½ normalUser
+	ï¿½ï¿½È¯ï¿½ï¿½    : ï¿½ï¿½ï¿½ï¿½
 */
 void ApplymentInquiry::run(NormalUser*normaluser) {
 	applymentInquiryUI=ApplymentInquiryUI();

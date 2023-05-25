@@ -2,6 +2,7 @@
 #pragma once
 #include <iostream>
 #include "EmploymentInformation.h"
+// EmploymentInformationCollection 클래스 정의
 class EmploymentInformationCollection{
     private:
         EmploymentInformation* managedEmploymentInformation[50];

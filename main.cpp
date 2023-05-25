@@ -15,6 +15,8 @@
 #include "BusinessUserCollection.h"
 #include "NormalUserCollection.h"
 #include "InquiryEmploymentList.h"
+#include "EmploymentInfoSearch.h"
+#include "ApplymentInquiry.h"
 using namespace std;
 // 상수 선언
 #define INPUT_FILE_NAME "input.txt"
@@ -132,6 +134,8 @@ void doTask()
                 {
                     case 1:// "4.1. 채용 정보 검색" 메뉴 부분
                     {
+                        EmploymentInfoSearch employmentInfoSearch;
+                        employmentInfoSearch.run(businessUserCollection);
                         break;
                     }
                     case 2:// "4.2. 채용 지원“ 메뉴 부분
@@ -140,7 +144,8 @@ void doTask()
                     }
                     case 3:// "4.3. 지원 정보 조회“ 메뉴 부분
                     {
-                        
+                        ApplymentInquiry applymentInquiry;
+                        applymentInquiry.run();
                         break;
                     }
                     case 4:// "4.4. 지원 취소“ 메뉴 부분

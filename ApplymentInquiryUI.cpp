@@ -1,6 +1,8 @@
+//헤더 선언
 #include "ApplymentInquiryUI.h"
 #include <string>
 using namespace std;
+//변수 선언
 #define INPUT_FILE_NAME "input.txt"
 #define OUTPUT_FILE_NAME "output.txt"
 /*

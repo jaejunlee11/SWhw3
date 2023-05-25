@@ -7,7 +7,7 @@
 #include "BusinessUserCollection.h"
 #include "EmploymentInformationCollection.h"
 using namespace std;
-
+// 채용정보 검색을 위한 EmploymentInfoSearch control 클래스 정의
 class EmploymentInfoSearch {
 private:
 	BusinessUser* businessUser;
@@ -15,7 +15,9 @@ private:
 	EmploymentInformation* employInfo;
 	EmploymentInfoSearchUI employmentInfoSearchUI;
 	EmploymentInformationCollection employInfoCollection;
+	int findCount;
 public:
-	void findEmploymentInformation(string companyName);
+	Employee* findEmploymentInformation(string companyName);
+	int findCountSize();
 	void run(BusinessUserCollection* businessUserCollection);
 };
