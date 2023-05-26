@@ -2,7 +2,6 @@
 #pragma once
 // 헤더 선언
 #include <iostream>
-#include "EmploymentRegister.h"
 //전방 선언
 class EmploymentRegister;
 // 입출력을 위한 EmploymentRegisterUI boundary클래스 정의

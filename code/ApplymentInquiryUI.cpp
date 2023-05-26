@@ -1,4 +1,5 @@
 //헤더 선언
+#include "ApplymentInformation.h"
 #include "ApplymentInquiryUI.h"
 #include <string>
 using namespace std;

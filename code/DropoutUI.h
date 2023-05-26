@@ -2,7 +2,6 @@
 #pragma once
 // 헤더 선언
 #include <iostream>
-#include "Dropout.h"
 //전방 선언
 class Dropout;
 // 입출력을 위한 boundary클래스 정의

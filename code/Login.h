@@ -18,5 +18,5 @@ class Login{
 
     public:
         void performLoginProcess(string id, string pw);
-        void run(BusinessUser* businessuserB,NormalUser* normaluserN,BusinessUserCollection* businessUserCollection,NormalUserCollection* NormalUserCollection);
+        void run(BusinessUser* businessuserB,NormalUser* normaluserN,BusinessUserCollection* businessUserCollection,NormalUserCollection* normalUserCollection);
 };

@@ -11,7 +11,7 @@ Employee* EmploymentInfoSearch::findEmploymentInformation(string companyName) {
 	Employee findArr[50];
 	findCount=0;
     businessUser = businessUserCollection->findFirst();
-	int count=businessUserCollection->getSize();
+	int UserCount=businessUserCollection->getSize();
 	employInfoCollection=businessUser->listEmploymentInformation();
 	employInfo = employInfoCollection.findFirst();
 	Employee infoArr[50];
@@ -29,14 +29,13 @@ Employee* EmploymentInfoSearch::findEmploymentInformation(string companyName) {
 			findCount+=1;
 		}
 	}
-	for (int i=1; i< count; i++){
+	for (int i=1; i< UserCount; i++){
 		businessUser = businessUserCollection->getNext();
-		int count=businessUserCollection->getSize();
 		employInfoCollection=businessUser->listEmploymentInformation();
 		employInfo = employInfoCollection.findFirst();
 		Employee infoArr[50];
 		infoArr[0] = employInfo->getEmploymentInformation();
-		int count = employInfoCollection.getSize();
+		count = employInfoCollection.getSize();
 		if (infoArr[0].companyName == companyName) {
 			findArr[findCount]=infoArr[0];
 			findCount+=1;
@@ -51,7 +50,7 @@ Employee* EmploymentInfoSearch::findEmploymentInformation(string companyName) {
 		}
 	}
 	arr=findArr;
-	return findArr;
+	return arr;
 }
 /*
 	함수 이름 : EmploymentInfoSearch::findCountSize()
@@ -70,7 +69,6 @@ int EmploymentInfoSearch::findCountSize(){
 */
 void EmploymentInfoSearch::run(BusinessUserCollection* businessUserCollection) {
 	this->businessUserCollection = businessUserCollection;
-	this->arr=arr;
 	employmentInfoSearchUI = EmploymentInfoSearchUI();
 	employmentInfoSearchUI.inputEmploymentInformation(this);
 }

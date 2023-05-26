@@ -3,7 +3,6 @@
 //헤더 선언
 #include <iostream>
 #include <string>
-#include "EmploymentInfoSearch.h"
 using namespace std;
 //전방 선언
 class EmploymentInfoSearch;

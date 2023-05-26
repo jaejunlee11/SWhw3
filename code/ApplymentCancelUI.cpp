@@ -1,5 +1,5 @@
 #include "ApplymentCancelUI.h"
-#include "ApplymentInformation.h"
+#include "ApplymentCancel.h"
 #include <string>
 using namespace std;
 #define INPUT_FILE_NAME "input.txt"

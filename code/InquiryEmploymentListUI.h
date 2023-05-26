@@ -5,8 +5,6 @@
 #include <string>
 #include "EmploymentInformation.h"
 using namespace std;
-//전방 선언
-class InquiryEmploymentList;
 //채용 정보 리스트 조회를 위한 UI class 선언
 class InquiryEmploymentListUI {
 public:

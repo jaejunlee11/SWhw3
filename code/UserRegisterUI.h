@@ -4,7 +4,6 @@
 // 헤더 선언
 #include <string>
 #include <iostream>
-#include "UserRegister.h"
 using namespace std;
 //전방선언
 class UserRegister;
