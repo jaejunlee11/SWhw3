@@ -28,7 +28,7 @@ void DropoutUI::normalUserDropout(Dropout *dropoutControl)
     id = dropout->deleteNormalUserPermission();
 	// 출력
 	fprintf(out_fp, "1.2. 회원탈퇴\n");
-	fprintf(out_fp, "%s\n", id);
+	fprintf(out_fp, "%s\n", id.c_str());
 };
 
 /*
@@ -51,6 +51,6 @@ void DropoutUI::businessUserDropout(Dropout *dropoutControl)
     id = dropout->deleteBusinessUserPermission();
 	// 출력
 	fprintf(out_fp, "1.2. 회원탈퇴\n");
-	fprintf(out_fp, "%s\n", id);
+	fprintf(out_fp, "%s\n", id.c_str());
 };
 

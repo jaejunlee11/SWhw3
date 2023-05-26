@@ -4,7 +4,7 @@
 #include <iostream>
 
 using namespace std;
-#include "User.h"
+#include "user.h"
 
 /*
 	함수 이름 : User::User()
@@ -49,11 +49,11 @@ void User::changeLoginState()
 {
     if(nowlogin == 1)
     {
-        nowlogin == 0;
+        nowlogin = 0;
     }
     else
     {
-        nowlogin == 1;
+        nowlogin = 1;
     }
 }
 

@@ -16,6 +16,6 @@ void ApplymentStatisticsUI::showApplymentStatistics(string work[],int applyTime[
 	// 출력
 	fprintf(out_fp, "5.1. 지원 정보 통계\n");
     for (int i = 0; i < workCount; i++){
-        fprintf(out_fp, "%s %d %s\n", work[i], applyTime[i]);
+        fprintf(out_fp, "%s %d\n", work[i].c_str(), applyTime[i]);
     }
 };

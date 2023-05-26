@@ -30,3 +30,13 @@ ApplymentInformation* ApplymentInformationCollection::getNext(){
     now=0;
     return managedApplymentInformation[0];
 };
+/*
+	함수 이름 : ApplymentInformationCollection::addApplymentInformation()
+	기능	  : 생성한 addApplymentInformation 배열에 저장
+	전달 인자 : work->업무, peopleNumber->인원수, deadline->신청마감일, companyName->회사이름, businessNumber->사업자 번호
+	반환값    : 없음
+*/
+ApplymentInformation ApplymentInformationCollection:: addApplymentInformation(string work, int peopleNumber, string deadline, string companyName, int businessNumber){
+    managedApplymentInformation[numApplymentInformation]= new ApplymentInformation(work,peopleNumber,deadline,companyName,false,businessNumber);
+    numApplymentInformation+=1;
+};

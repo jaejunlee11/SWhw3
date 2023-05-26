@@ -70,4 +70,5 @@ NormalUser* NormalUserCollection::findNormalUser(string id, string pw)
     {
         return checkuser;
     }
+    return NULL;
 }

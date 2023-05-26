@@ -17,6 +17,6 @@ void InquiryEmploymentListUI::showEmploymentList(Employee infoArr[], int count) 
 
     fprintf(out_fp, "3.2. 등록된 채용 정보 조회\n");
     for (int i = 0; i < count; i++) {
-        fprintf(out_fp, "%s %d %s\n", infoArr[i].work, infoArr[i].peopleNumber, infoArr[i].deadline);
+        fprintf(out_fp, "%s %d %s\n", infoArr[i].work.c_str(), infoArr[i].peopleNumber, infoArr[i].deadline.c_str());
     }
 };

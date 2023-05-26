@@ -12,9 +12,9 @@ class ApplymentInquiry {
 private:
     NormalUser* normalUser;
     ApplymentInquiryUI applymentInquiryUI;
-    ApplymentInformation applymentInformation;
+    ApplymentInformation* applyInfo;
     ApplymentInformationCollection applyInfoCollection;
 public:
     void run(NormalUser *normaluser);
-    ApplymentInquiry();
+
 };

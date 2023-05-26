@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include "UserApplyUI.h"
-#include "EmploymentInformation.h"
+#include "ApplymentInformation.h"
 #include "NormalUser.h"
 #include "EmploymentInfoSearch.h"
 using namespace std;
@@ -13,7 +13,7 @@ class UserApply{
     private:
         UserApplyUI userApplyUI;
         NormalUser *normalUser;
-        EmploymentInformation *employmentInformation;
+        ApplymentInformation *applymentInformation;
     public:
         void addApplymentInformation(string work,int peopleNumber,string deadline,string companyName,int businessNumber);
         void run(NormalUser *normalUser,EmploymentInfoSearch employmentInfoSearch);

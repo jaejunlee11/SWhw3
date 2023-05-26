@@ -15,11 +15,13 @@ void EmploymentInfoSearchUI::inputEmploymentInformation(EmploymentInfoSearch* co
 	FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
 	FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
 	Employee* infoArr;
-	fscanf(in_fp, "%s", companyName);
+	char companyNameBuffer[100];
+	fscanf(in_fp, "%s", companyNameBuffer);
+	companyName=companyNameBuffer;
 	infoArr=control->findEmploymentInformation(companyName);
 	int count=control->findCountSize();
 	fprintf(out_fp, "4.1. 채용 정보 검색\n");
 	for(int i=0;i<count;i++){
-		fprintf(out_fp, "%s %d %s %d %s", infoArr[i].companyName, infoArr[i].businessNumber, infoArr[i].work, infoArr[i].peopleNumber, infoArr[i].deadline);
+		fprintf(out_fp, "%s %d %s %d %s", infoArr[i].companyName.c_str(), infoArr[i].businessNumber, infoArr[i].work.c_str(), infoArr[i].peopleNumber, infoArr[i].deadline.c_str());
 	}
 };

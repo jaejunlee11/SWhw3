@@ -8,7 +8,7 @@ class UserApply;
 class UserApplyUI
 {
     private:
-
+        UserApply userApply;
     public:
-
+        void show();
 };

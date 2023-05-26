@@ -7,16 +7,14 @@
 	반환값    : 없음
 */
 void UserApply::addApplymentInformation(string work,int peopleNumber,string deadline,string companyName,int businessNumber){
-    businessUser->addNewEmploymentInformation(work,peopleNumber,deadline);
+    normalUser->addApplymentInformation(work,peopleNumber,deadline,companyName,businessNumber);
 };
 /*
-	함수 이름 : EmploymentRegister::run()
-	기능	  : control class생성 후 채용정보등록 실행
-	전달 인자 : businessUser->현재 로그인한 businessUser
+	함수 이름 : UserApply::run()
+	기능	  : control class생성 후 지원하기 실행
+	전달 인자 : normalUser->현재 로그인한 normalUser ,employmentInfoSearch->검색했던 정보를 위한 인스턴스
 	반환값    : 없음
 */
 void UserApply::run(NormalUser *normalUser,EmploymentInfoSearch employmentInfoSearch){
-    this->businessUser=businessUser;
-    employmentRegisterUI=EmploymentRegisterUI();
-    employmentRegisterUI.registerEmploymentInformation(this);
+
 }

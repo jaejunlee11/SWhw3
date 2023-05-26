@@ -73,4 +73,5 @@ BusinessUser* BusinessUserCollection::findBusinessUser(string id, string pw)
     {
         return checkuser;
     }
+    return NULL;
 }

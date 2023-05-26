@@ -23,7 +23,7 @@ void LogoutUI::normalUserLogout(Logout *LogoutControl)
     id = logout->performNormalUserLogout();
 	// 출력
 	fprintf(out_fp, "2.2. 로그아웃\n");
-	fprintf(out_fp, "%s %d %s\n", id);
+	fprintf(out_fp, "%s\n", id.c_str());
 };
 
 /*
@@ -43,5 +43,5 @@ void LogoutUI::businessUserLogout(Logout *LogoutControl)
     id = logout->performBusinessUserLogout();
 	// 출력
 	fprintf(out_fp, "2.2. 로그아웃\n");
-	fprintf(out_fp, "%s %d %s\n", id);
+	fprintf(out_fp, "%s\n", id.c_str());
 };

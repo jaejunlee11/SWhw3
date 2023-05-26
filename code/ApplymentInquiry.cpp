@@ -26,7 +26,7 @@ void ApplymentInquiry::run(NormalUser*normaluser) {
 	this->normalUser = normaluser;
 	applyInfoCollection = normalUser->listApplymentInformation();
 
-	ApplymentInformation* applyInfo = applyInfoCollection.findFirst();
+	applyInfo = applyInfoCollection.findFirst();
 	infoArr[0] = applyInfo->getApplymentInformation();
 	int count = applyInfoCollection.getSize();
 
@@ -39,4 +39,3 @@ void ApplymentInquiry::run(NormalUser*normaluser) {
 
 	applymentInquiryUI.showApplymentList(infoArr, count);
 }
-

@@ -20,10 +20,14 @@ void EmploymentRegisterUI::registerEmploymentInformation(EmploymentRegister *emp
     FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
 	string work, deadline;
 	int peopleNumber;
+	char workBuffer[100];
+	char deadlineBuffer[100];	
 	// 업무, 인원수, 신청 마감일 입력
-	fscanf(in_fp, "%s %d %s", work, &peopleNumber, deadline);
+	fscanf(in_fp, "%s %d %s", workBuffer, &peopleNumber, deadlineBuffer);
+	work = workBuffer;
+	deadline = deadlineBuffer;
     employmentRegister->addEmploymentInformation(work,peopleNumber,deadline);
 	// 출력
 	fprintf(out_fp, "3.1. 채용 정보 등록\n");
-	fprintf(out_fp, "%s %d %s\n", work, peopleNumber, deadline);
+	fprintf(out_fp, "%s %d %s\n", work.c_str(), peopleNumber, deadline.c_str());
 };

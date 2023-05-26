@@ -20,10 +20,13 @@ void LoginUI::showLoginProcess(Login *loginControl)
     FILE* in_fp = fopen(INPUT_FILE_NAME, "r+");
     FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
 	string id,pw;
-
-	fscanf(in_fp, "%s %s", id, pw);
+	char idBuffer[100];
+	char pwBuffer[100];
+	fscanf(in_fp, "%s %s", idBuffer, pwBuffer);
+	id = idBuffer;
+	pw = pwBuffer;	
     login->performLoginProcess(id,pw);
 	// 출력
 	fprintf(out_fp, "2.1 로그인\n");
-	fprintf(out_fp, "%s %s\n", id,pw);
+	fprintf(out_fp, "%s %s\n", id.c_str(),pw.c_str());
 };

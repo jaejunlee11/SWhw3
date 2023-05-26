@@ -21,7 +21,14 @@ void UserRegisterUI::newUserRegister(UserRegister *userRegisterControl,int choic
     FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w+");
     string name, id, pw;
     int unino;
-    fscanf(in_fp, "%d %s %s",&name, unino, &id, &pw);
+    char nameBuffer[100];
+    char idBuffer[100]; 
+    char pwBuffer[100]; 
+    fscanf(in_fp, "%s %d %s %s",nameBuffer, &unino, idBuffer, pwBuffer);
+    name = nameBuffer;
+    id = idBuffer;
+    pw = pwBuffer;
+
     if(choice == 1)
     {
         userRegister->addBusinessUser(name,unino,id,pw);
@@ -31,7 +38,7 @@ void UserRegisterUI::newUserRegister(UserRegister *userRegisterControl,int choic
         userRegister->addNormalUser(name,unino,id,pw);
     }
     fprintf(out_fp, "1.1. 회원가입\n");
-    fprintf(out_fp, "%d %s %d %s %s", choice, &name, unino, &id, &pw, "\n");
+    fprintf(out_fp, "%d %s %d %s %s\n", choice, name.c_str(), unino, id.c_str(), pw.c_str());
 
 
 

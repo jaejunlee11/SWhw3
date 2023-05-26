@@ -27,6 +27,7 @@ format ApplymentCancel::cancelApplyment(int cancelNum) {
 			return infoArr[i];
 		}
 	}
+	return infoArr[0];
 }
 
 /*

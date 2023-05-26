@@ -16,5 +16,5 @@ class NormalUser: public User {
 		NormalUser();
 		NormalUser(string name, int ssn, string id, string pw);
 		ApplymentInformationCollection listApplymentInformation();
-		void addApplymentInformation();
+		void addApplymentInformation(string work,int peopleNumber,string deadline,string companyName,int businessNumber);
 };
